@@ -27,10 +27,10 @@ Partial Class Form2
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.adm_pwd_txt = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.clear_bt = New System.Windows.Forms.Button()
+        Me.adm_id_txt = New System.Windows.Forms.TextBox()
         Me.cont_bt = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -55,10 +55,10 @@ Partial Class Form2
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.PictureBox5)
         Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.TextBox3)
+        Me.Panel1.Controls.Add(Me.adm_pwd_txt)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.clear_bt)
+        Me.Panel1.Controls.Add(Me.adm_id_txt)
         Me.Panel1.Controls.Add(Me.cont_bt)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
@@ -100,15 +100,15 @@ Partial Class Form2
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "Password"
         '
-        'TextBox3
+        'adm_pwd_txt
         '
-        Me.TextBox3.BackColor = System.Drawing.Color.White
-        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox3.ForeColor = System.Drawing.Color.Black
-        Me.TextBox3.Location = New System.Drawing.Point(27, 256)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(266, 20)
-        Me.TextBox3.TabIndex = 9
+        Me.adm_pwd_txt.BackColor = System.Drawing.Color.White
+        Me.adm_pwd_txt.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.adm_pwd_txt.ForeColor = System.Drawing.Color.Black
+        Me.adm_pwd_txt.Location = New System.Drawing.Point(27, 256)
+        Me.adm_pwd_txt.Name = "adm_pwd_txt"
+        Me.adm_pwd_txt.Size = New System.Drawing.Size(266, 20)
+        Me.adm_pwd_txt.TabIndex = 9
         '
         'Label4
         '
@@ -120,28 +120,28 @@ Partial Class Form2
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Admin ID"
         '
-        'Button2
+        'clear_bt
         '
-        Me.Button2.BackColor = System.Drawing.Color.LightGray
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(67, 341)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(94, 29)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Clear"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.clear_bt.BackColor = System.Drawing.Color.LightGray
+        Me.clear_bt.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.clear_bt.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.clear_bt.ForeColor = System.Drawing.Color.Black
+        Me.clear_bt.Location = New System.Drawing.Point(67, 341)
+        Me.clear_bt.Name = "clear_bt"
+        Me.clear_bt.Size = New System.Drawing.Size(94, 29)
+        Me.clear_bt.TabIndex = 5
+        Me.clear_bt.Text = "Clear"
+        Me.clear_bt.UseVisualStyleBackColor = False
         '
-        'TextBox2
+        'adm_id_txt
         '
-        Me.TextBox2.BackColor = System.Drawing.Color.White
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.ForeColor = System.Drawing.Color.Black
-        Me.TextBox2.Location = New System.Drawing.Point(27, 179)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(266, 20)
-        Me.TextBox2.TabIndex = 4
+        Me.adm_id_txt.BackColor = System.Drawing.Color.White
+        Me.adm_id_txt.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.adm_id_txt.ForeColor = System.Drawing.Color.Black
+        Me.adm_id_txt.Location = New System.Drawing.Point(27, 179)
+        Me.adm_id_txt.Name = "adm_id_txt"
+        Me.adm_id_txt.Size = New System.Drawing.Size(266, 20)
+        Me.adm_id_txt.TabIndex = 4
         '
         'cont_bt
         '
@@ -188,7 +188,7 @@ Partial Class Form2
         Me.switchusreg_bt.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.switchusreg_bt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.switchusreg_bt.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.switchusreg_bt.Location = New System.Drawing.Point(239, 392)
+        Me.switchusreg_bt.Location = New System.Drawing.Point(237, 391)
         Me.switchusreg_bt.Name = "switchusreg_bt"
         Me.switchusreg_bt.Size = New System.Drawing.Size(180, 29)
         Me.switchusreg_bt.TabIndex = 6
@@ -281,11 +281,11 @@ Partial Class Form2
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents adm_pwd_txt As TextBox
     Protected WithEvents Label4 As Label
     Friend WithEvents switchusreg_bt As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents clear_bt As Button
+    Friend WithEvents adm_id_txt As TextBox
     Friend WithEvents cont_bt As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label

@@ -4,7 +4,6 @@ Imports MySql.Data.MySqlClient
 
 Public Class Form1
 
-    '/*Draggability..?
     Public Const WM_NCLBUTTONDOWN As Integer = 161
     Public Const HT_CAPTION As Integer = 2
 
@@ -13,33 +12,12 @@ Public Class Form1
 
     <DllImport("User32")> Private Shared Function ReleaseCapture() As Boolean
     End Function
-    '*/
 
-    'Dim cmd As MySqlCommand
-    'Dim dr As MySqlDataReader
-    'Dim Con = New MySqlConnection
-
-    '//Drag enabling sub routine
     Private Sub GetsDragged(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown
         If (e.Button = MouseButtons.Left) Then
             ReleaseCapture()
             SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0)
         End If
-    End Sub
-
-    '/Connection to MySQL
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        'Dim connString As String
-        'connString = "datasource=localhost; uid=root; pwd=Chs55432; database=plitdb"
-        'Try
-        '    Con.ConnectionString = connString
-        '    Con.Open()
-        '    MessageBox.Show("connected")
-        'Catch ex As Exception
-        '    MessageBox.Show("Error connecting to database." & ex.Message)
-        '    Application.Exit()
-        'End Try
     End Sub
 
     Private Sub Minimize(sender As Object, e As EventArgs) Handles mini_bt.Click
@@ -58,13 +36,28 @@ Public Class Form1
     End Sub
 
     Private Sub Continues(sender As Object, e As EventArgs) Handles cont_bt.Click
+        Dim repcred As Boolean = False
+        Dim connString As String = "datasource=localhost; uid=root; pwd=Chs55432; database=plitdb"
+        Dim con As New MySqlConnection(connString)
+        con.Open()
+        Dim cmd As New MySqlCommand("SELECT * from user_reg where us_id = @r1 or us_email = @r2 or us_phone = @r3", con)
+        cmd.Parameters.AddWithValue("@r1", us_id_txt.Text)
+        cmd.Parameters.AddWithValue("@r2", us_email_txt.Text)
+        cmd.Parameters.AddWithValue("@r3", us_phno_txt.Text)
+        Dim dr As MySqlDataReader = cmd.ExecuteReader()
+        If dr.HasRows Then
+            repcred = True
+        End If
+        dr.Close()
+        con.Close()
+        cmd.Parameters.Clear()
         If us_email_txt.Text = "" Or us_id_txt.Text = "" Or us_phno_txt.Text = "" Or us_pwd_txt.Text = "" Or us_name_txt.Text = "" Then
             MessageBox.Show("Please fill all your details")
+        ElseIf repcred = True Then
+            MessageBox.Show("The ID, email address and/or phone number entered seem to already exist in our database")
         Else
-            Dim connString As String = "datasource=localhost; uid=root; pwd=Chs55432; database=plitdb"
-            Dim con As New MySqlConnection(connString)
-            Dim cmd As New MySqlCommand
-            cmd.Connection = con
+            'Dim cmd As New MySqlCommand
+            'cmd.Connection = con
             cmd.CommandText = "INSERT into user_reg (us_id, us_pwd, us_name, us_email, us_phone) values (@v1, @v2, @v3, @v4, @v5);
                                INSERT into user_login values (@v1, @v2)"
             cmd.Parameters.AddWithValue("@v1", us_id_txt.Text)
@@ -76,6 +69,7 @@ Public Class Form1
             cmd.ExecuteNonQuery()
             con.Close()
             MessageBox.Show("Account created")
+            cmd.Parameters.Clear()
             Form3.Show()
             Me.Hide()
         End If

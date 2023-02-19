@@ -42,22 +42,26 @@ Public Class Form8
             Dim cmd As New MySqlCommand("SELECT * from user_login WHERE us_id = @v1", con)
             cmd.Parameters.AddWithValue("@v1", us_id_txt.Text)
             Dim dr As MySqlDataReader = cmd.ExecuteReader()
-            'cmd.Parameters.Clear()
             If dr.Read Then
                 If dr.GetString("us_id") = us_id_txt.Text Then
                     If dr.GetString("us_pwd") = us_pwd_txt.Text Then
                         MessageBox.Show("Login Successful")
                         Form3.Show()
                         dr.Close()
+                        con.Close()
+                        cmd.Parameters.Clear()
                         Me.Close()
                     Else
                         MessageBox.Show("The password you entered is incorrect")
                         dr.Close()
+                        con.Close()
+                        cmd.Parameters.Clear()
                     End If
                 End If
             Else
-                cmd.Parameters.Clear()
                 dr.Close()
+                con.Close()
+                cmd.Parameters.Clear()
                 MessageBox.Show("The User ID entered does not exist")
             End If
         End If

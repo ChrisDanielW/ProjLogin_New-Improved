@@ -19,29 +19,12 @@ Public Class Form2
         End If
     End Sub
 
-    Dim cmd As MySqlCommand
-    Dim dr As MySqlDataReader
-    Dim Con = New MySqlConnection
-
-    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim connString As String
-        connString = "datasource=localhost; uid=root; pwd=Chs55432; database=plitdb"
-        Try
-            Con.ConnectionString = connString
-            Con.Open()
-            MessageBox.Show("connected")
-        Catch ex As Exception
-            MessageBox.Show("Error connecting to database." & ex.Message)
-            Application.Exit()
-        End Try
-    End Sub
-
     Private Sub Minimize(sender As Object, e As EventArgs) Handles mini_bt.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
     Private Sub CloseForm(sender As Object, e As EventArgs) Handles close_bt.Click
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub ExitForm(sender As Object, e As EventArgs) Handles fexit_bt.Click
@@ -50,10 +33,66 @@ Public Class Form2
         End If
     End Sub
 
+    Private Sub Continues(sender As Object, e As EventArgs) Handles cont_bt.Click
+        If adm_id_txt.Text = "" Or adm_pwd_txt.Text = "" Then
+            MessageBox.Show("Please fill all your details")
+        Else
+            Dim con As New MySqlConnection("datasource=localhost; uid=root; pwd=Chs55432; database=plitdb")
+            con.Open()
+            Dim cmd As New MySqlCommand("SELECT * from adm_login WHERE adm_id = @v1", con)
+            cmd.Parameters.AddWithValue("@v1", adm_id_txt.Text)
+            Dim dr As MySqlDataReader = cmd.ExecuteReader()
+            If dr.Read Then
+                If dr.GetString("adm_id") = adm_id_txt.Text Then
+                    If dr.GetString("adm_pwd") = adm_pwd_txt.Text Then
+                        MessageBox.Show("Login Successful")
+                        Form3.Show()
+                        dr.Close()
+                        con.Close()
+                        cmd.Parameters.Clear()
+                        Me.Close()
+                    Else
+                        MessageBox.Show("The password you entered is incorrect")
+                        dr.Close()
+                        con.Close()
+                        cmd.Parameters.Clear()
+                    End If
+                End If
+            Else
+                dr.Close()
+                con.Close()
+                cmd.Parameters.Clear()
+                MessageBox.Show("The Admin ID entered does not exist")
+            End If
+        End If
+    End Sub
+
+    Private Sub clear_bt_Click(sender As Object, e As EventArgs) Handles clear_bt.Click
+        adm_id_txt.Text = ""
+        adm_pwd_txt.Text = ""
+    End Sub
+
     Private Sub switchusreg_bt_Click(sender As Object, e As EventArgs) Handles switchusreg_bt.Click
         If MsgBox("Are you sure you want to switch to user options?", vbQuestion Or vbYesNo Or vbDefaultButton2, "Switching to user") = vbYes Then
             Form1.Show()
             Me.Close()
         End If
     End Sub
+
+    Private Sub ID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles adm_id_txt.KeyPress
+        If Char.IsLetter(e.KeyChar) Or e.KeyChar = vbBack Or e.KeyChar = "-" Or e.KeyChar = "_" Or Char.IsDigit(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub Password_KeyPress(sender As Object, e As KeyPressEventArgs) Handles adm_pwd_txt.KeyPress
+        If Char.IsLetter(e.KeyChar) Or e.KeyChar = vbBack Or e.KeyChar = "-" Or e.KeyChar = "_" Or Char.IsDigit(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
 End Class
