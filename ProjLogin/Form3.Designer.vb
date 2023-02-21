@@ -26,7 +26,7 @@ Partial Class Form3
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.sysrate_lbl = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -98,7 +98,7 @@ Partial Class Form3
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Navy
-        Me.Panel1.Controls.Add(Me.Label14)
+        Me.Panel1.Controls.Add(Me.sysrate_lbl)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Label13)
         Me.Panel1.Controls.Add(Me.Panel2)
@@ -108,15 +108,16 @@ Partial Class Form3
         Me.Panel1.Size = New System.Drawing.Size(1064, 550)
         Me.Panel1.TabIndex = 10
         '
-        'Label14
+        'sysrate_lbl
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.ForeColor = System.Drawing.Color.White
-        Me.Label14.Location = New System.Drawing.Point(935, 417)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(52, 20)
-        Me.Label14.TabIndex = 21
-        Me.Label14.Text = "Rating"
+        Me.sysrate_lbl.AutoSize = True
+        Me.sysrate_lbl.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point)
+        Me.sysrate_lbl.ForeColor = System.Drawing.Color.White
+        Me.sysrate_lbl.Location = New System.Drawing.Point(896, 436)
+        Me.sysrate_lbl.Name = "sysrate_lbl"
+        Me.sysrate_lbl.Size = New System.Drawing.Size(71, 28)
+        Me.sysrate_lbl.TabIndex = 21
+        Me.sysrate_lbl.Text = "Rating"
         '
         'Button3
         '
@@ -124,7 +125,7 @@ Partial Class Form3
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Location = New System.Drawing.Point(791, 465)
+        Me.Button3.Location = New System.Drawing.Point(925, 499)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(94, 29)
         Me.Button3.TabIndex = 20
@@ -138,7 +139,7 @@ Partial Class Form3
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Segoe UI Variable Display Semib", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(718, 401)
+        Me.Label13.Location = New System.Drawing.Point(679, 427)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(211, 40)
         Me.Label13.TabIndex = 19
@@ -581,7 +582,7 @@ Partial Class Form3
     Friend WithEvents calc_bt As Button
     Friend WithEvents Label13 As Label
     Friend WithEvents Button3 As Button
-    Friend WithEvents Label14 As Label
+    Friend WithEvents sysrate_lbl As Label
     Friend WithEvents fexit_bt As PictureBox
     Friend WithEvents mini_bt As PictureBox
     Friend WithEvents close_bt As PictureBox

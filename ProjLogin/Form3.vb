@@ -55,6 +55,7 @@ Public Class Form3
     Private Sub cpumfct_txt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cpumfct_txt.SelectedIndexChanged
         HasIntel = False
         HasAMD = False
+        cpugen_txt.Items.Clear()
         If cpumfct_txt.Text = "Intel i3" Or cpumfct_txt.Text = "Intel i5" Or cpumfct_txt.Text = "Intel i7" Then
             HasIntel = True
             cpugen_txt.Items.Add("1st")
@@ -70,7 +71,7 @@ Public Class Form3
             cpugen_txt.Items.Add("11th")
             cpugen_txt.Items.Add("12th")
             cpugen_txt.Items.Add("13th")
-        ElseIf cpumfct_txt.Text = "Ryzen 3" Or cpumfct_txt.Text = "Ryzen 5" Or cpumfct_txt.Text = "Ryzen 7" Then
+        ElseIf cpumfct_txt.Text = "AMD Ryzen 3" Or cpumfct_txt.Text = "AMD Ryzen 5" Or cpumfct_txt.Text = "AMD Ryzen 7" Then
             HasAMD = True
             cpugen_txt.Items.Add("1st")
             cpugen_txt.Items.Add("2nd")
@@ -98,34 +99,55 @@ Public Class Form3
     Private Sub calc_bt_Click(sender As Object, e As EventArgs) Handles calc_bt.Click
 
         SysRate = 0
+        sysrate_lbl.Text = ""
 
         If HasGPU = True Then
             SysRate += 3
         End If
 
         If ram_box.Text = "2" Then
-            SysRate += 0
+            SysRate += 0.5
         ElseIf ram_box.Text = "4" Then
             SysRate += 1
         ElseIf ram_box.Text = "8" Or "12" Then
+            SysRate += 1.5
+        ElseIf ram_box.Text = "16" Then
             SysRate += 2
         Else
-            SysRate += 3
+            SysRate += 2.5
         End If
 
         If HasIntel = True Then
+            If cpumfct_txt.Text = "Intel i3" Then
+                SysRate += 1
+            ElseIf cpumfct_txt.Text = "Intel i5" Then
+                SysRate += 1.5
+            Else
+                SysRate += 2.5
+            End If
+
             If cpugen_txt.Text = "1st" Or cpugen_txt.Text = "2nd" Or cpugen_txt.Text = "3rd" Then
                 SysRate += 0
             ElseIf cpugen_txt.Text = "4th" Or cpugen_txt.Text = "5th" Or cpugen_txt.Text = "6th" Then
                 SysRate += 1
             ElseIf cpugen_txt.Text = "7th" Or cpugen_txt.Text = "8th" Or cpugen_txt.Text = "9th" Then
                 SysRate += 2
+            ElseIf cpugen_txt.Text = "10th" Or cpugen_txt.Text = "11th" Then
+                SysRate += 2.5
             Else
                 SysRate += 3
             End If
         End If
 
         If HasAMD = True Then
+            If cpumfct_txt.Text = "AMD Ryzen 3" Then
+                SysRate += 1
+            ElseIf cpumfct_txt.Text = "AMD Ryzen 5" Then
+                SysRate += 1.5
+            Else
+                SysRate += 2.5
+            End If
+
             If cpugen_txt.Text = "1st" Or cpugen_txt.Text = "2nd" Then
                 SysRate += 1
             ElseIf cpugen_txt.Text = "3rd" Or cpugen_txt.Text = "4th" Or cpugen_txt.Text = "5th" Then
@@ -136,8 +158,10 @@ Public Class Form3
         End If
 
         If HasAMD = False And HasIntel = False Then
-            SysRate += 0
+            SysRate += 0.5
         End If
+
+        sysrate_lbl.Text = SysRate.ToString("0.0") + "/10"
 
     End Sub
 
