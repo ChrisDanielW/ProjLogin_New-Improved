@@ -30,35 +30,35 @@ Partial Class Form3
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.descrip_txt = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cpugen_txt = New System.Windows.Forms.ComboBox()
+        Me.cpumfct_txt = New System.Windows.Forms.ComboBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.cpugen_lbl = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.ram_box = New System.Windows.Forms.ComboBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.os_txt = New System.Windows.Forms.ComboBox()
+        Me.clear_bt = New System.Windows.Forms.Button()
+        Me.calc_bt = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.storage_use_txt = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.ded_rad = New System.Windows.Forms.RadioButton()
+        Me.int_rad = New System.Windows.Forms.RadioButton()
+        Me.gpu_lbl = New System.Windows.Forms.Label()
+        Me.cpu_lbl = New System.Windows.Forms.Label()
+        Me.storage_lbl = New System.Windows.Forms.Label()
+        Me.ram_lbl = New System.Windows.Forms.Label()
+        Me.os_lbl = New System.Windows.Forms.Label()
+        Me.gpu_ded = New System.Windows.Forms.TextBox()
+        Me.gpu_int = New System.Windows.Forms.TextBox()
+        Me.storage_tot_txt = New System.Windows.Forms.TextBox()
         Me.fexit_bt = New System.Windows.Forms.PictureBox()
         Me.mini_bt = New System.Windows.Forms.PictureBox()
         Me.close_bt = New System.Windows.Forms.PictureBox()
@@ -148,25 +148,25 @@ Partial Class Form3
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.MidnightBlue
-        Me.Panel2.Controls.Add(Me.TextBox7)
+        Me.Panel2.Controls.Add(Me.descrip_txt)
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Location = New System.Drawing.Point(652, 40)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(385, 328)
         Me.Panel2.TabIndex = 18
         '
-        'TextBox7
+        'descrip_txt
         '
-        Me.TextBox7.BackColor = System.Drawing.Color.MidnightBlue
-        Me.TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox7.ForeColor = System.Drawing.Color.White
-        Me.TextBox7.Location = New System.Drawing.Point(10, 62)
-        Me.TextBox7.Multiline = True
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.PlaceholderText = "Click on any configuration to learn more about it"
-        Me.TextBox7.ReadOnly = True
-        Me.TextBox7.Size = New System.Drawing.Size(367, 253)
-        Me.TextBox7.TabIndex = 12
+        Me.descrip_txt.BackColor = System.Drawing.Color.MidnightBlue
+        Me.descrip_txt.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.descrip_txt.ForeColor = System.Drawing.Color.White
+        Me.descrip_txt.Location = New System.Drawing.Point(10, 62)
+        Me.descrip_txt.Multiline = True
+        Me.descrip_txt.Name = "descrip_txt"
+        Me.descrip_txt.PlaceholderText = "Click on any configuration to learn more about it"
+        Me.descrip_txt.ReadOnly = True
+        Me.descrip_txt.Size = New System.Drawing.Size(367, 253)
+        Me.descrip_txt.TabIndex = 12
         '
         'Label10
         '
@@ -184,32 +184,32 @@ Partial Class Form3
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.cpugen_txt)
+        Me.GroupBox1.Controls.Add(Me.cpumfct_txt)
         Me.GroupBox1.Controls.Add(Me.Label19)
         Me.GroupBox1.Controls.Add(Me.Label18)
-        Me.GroupBox1.Controls.Add(Me.Label17)
+        Me.GroupBox1.Controls.Add(Me.cpugen_lbl)
         Me.GroupBox1.Controls.Add(Me.Label16)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Controls.Add(Me.ComboBox2)
+        Me.GroupBox1.Controls.Add(Me.ram_box)
         Me.GroupBox1.Controls.Add(Me.Label15)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
-        Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.os_txt)
+        Me.GroupBox1.Controls.Add(Me.clear_bt)
+        Me.GroupBox1.Controls.Add(Me.calc_bt)
         Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.Label11)
-        Me.GroupBox1.Controls.Add(Me.TextBox8)
+        Me.GroupBox1.Controls.Add(Me.storage_use_txt)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.TextBox6)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Controls.Add(Me.ded_rad)
+        Me.GroupBox1.Controls.Add(Me.int_rad)
+        Me.GroupBox1.Controls.Add(Me.gpu_lbl)
+        Me.GroupBox1.Controls.Add(Me.cpu_lbl)
+        Me.GroupBox1.Controls.Add(Me.storage_lbl)
+        Me.GroupBox1.Controls.Add(Me.ram_lbl)
+        Me.GroupBox1.Controls.Add(Me.os_lbl)
+        Me.GroupBox1.Controls.Add(Me.gpu_ded)
+        Me.GroupBox1.Controls.Add(Me.gpu_int)
+        Me.GroupBox1.Controls.Add(Me.storage_tot_txt)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(21, 12)
         Me.GroupBox1.Name = "GroupBox1"
@@ -217,6 +217,28 @@ Partial Class Form3
         Me.GroupBox1.TabIndex = 17
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Specifications"
+        '
+        'cpugen_txt
+        '
+        Me.cpugen_txt.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.cpugen_txt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cpugen_txt.ForeColor = System.Drawing.Color.White
+        Me.cpugen_txt.FormattingEnabled = True
+        Me.cpugen_txt.Location = New System.Drawing.Point(254, 306)
+        Me.cpugen_txt.Name = "cpugen_txt"
+        Me.cpugen_txt.Size = New System.Drawing.Size(59, 28)
+        Me.cpugen_txt.TabIndex = 33
+        '
+        'cpumfct_txt
+        '
+        Me.cpumfct_txt.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.cpumfct_txt.ForeColor = System.Drawing.Color.White
+        Me.cpumfct_txt.FormattingEnabled = True
+        Me.cpumfct_txt.Items.AddRange(New Object() {"AMD Athlon", "AMD Ryzen 3", "AMD Ryzen 5", "AMD Ryzen 7", "Intel Pentium", "Intel i3", "Intel i5", "Intel i7"})
+        Me.cpumfct_txt.Location = New System.Drawing.Point(254, 262)
+        Me.cpumfct_txt.Name = "cpumfct_txt"
+        Me.cpumfct_txt.Size = New System.Drawing.Size(313, 28)
+        Me.cpumfct_txt.TabIndex = 32
         '
         'Label19
         '
@@ -238,15 +260,15 @@ Partial Class Form3
         Me.Label18.TabIndex = 30
         Me.Label18.Text = "GB"
         '
-        'Label17
+        'cpugen_lbl
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.ForeColor = System.Drawing.Color.White
-        Me.Label17.Location = New System.Drawing.Point(166, 306)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(82, 20)
-        Me.Label17.TabIndex = 29
-        Me.Label17.Text = "Generation"
+        Me.cpugen_lbl.AutoSize = True
+        Me.cpugen_lbl.ForeColor = System.Drawing.Color.White
+        Me.cpugen_lbl.Location = New System.Drawing.Point(166, 306)
+        Me.cpugen_lbl.Name = "cpugen_lbl"
+        Me.cpugen_lbl.Size = New System.Drawing.Size(82, 20)
+        Me.cpugen_lbl.TabIndex = 29
+        Me.cpugen_lbl.Text = "Generation"
         '
         'Label16
         '
@@ -258,25 +280,17 @@ Partial Class Form3
         Me.Label16.TabIndex = 28
         Me.Label16.Text = "Manufacturer/Sub Brand"
         '
-        'TextBox1
+        'ram_box
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox1.ForeColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(254, 303)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(313, 27)
-        Me.TextBox1.TabIndex = 27
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"2", "4", "6", "8", "12", "16", "24", "32"})
-        Me.ComboBox2.Location = New System.Drawing.Point(254, 81)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(59, 35)
-        Me.ComboBox2.TabIndex = 26
+        Me.ram_box.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ram_box.DisplayMember = "Integer"
+        Me.ram_box.ForeColor = System.Drawing.Color.White
+        Me.ram_box.FormattingEnabled = True
+        Me.ram_box.Items.AddRange(New Object() {"2", "4", "6", "8", "12", "16", "24", "32"})
+        Me.ram_box.Location = New System.Drawing.Point(254, 81)
+        Me.ram_box.Name = "ram_box"
+        Me.ram_box.Size = New System.Drawing.Size(59, 28)
+        Me.ram_box.TabIndex = 26
         '
         'Label15
         '
@@ -288,42 +302,44 @@ Partial Class Form3
         Me.Label15.TabIndex = 25
         Me.Label15.Text = "GB"
         '
-        'ComboBox1
+        'os_txt
         '
-        Me.ComboBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Windows 7", "Windows 8", "Windows 8.1", "Windows 10", "Windows 11"})
-        Me.ComboBox1.Location = New System.Drawing.Point(254, 39)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(313, 35)
-        Me.ComboBox1.TabIndex = 24
+        Me.os_txt.AllowDrop = True
+        Me.os_txt.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.os_txt.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.os_txt.ForeColor = System.Drawing.Color.White
+        Me.os_txt.FormattingEnabled = True
+        Me.os_txt.Items.AddRange(New Object() {"Windows 7", "Windows 8", "Windows 8.1", "Windows 10", "Windows 11"})
+        Me.os_txt.Location = New System.Drawing.Point(254, 39)
+        Me.os_txt.Name = "os_txt"
+        Me.os_txt.Size = New System.Drawing.Size(313, 28)
+        Me.os_txt.TabIndex = 24
         '
-        'Button2
+        'clear_bt
         '
-        Me.Button2.BackColor = System.Drawing.Color.LightGray
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(311, 471)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(94, 29)
-        Me.Button2.TabIndex = 20
-        Me.Button2.Text = "Clear"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.clear_bt.BackColor = System.Drawing.Color.LightGray
+        Me.clear_bt.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.clear_bt.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.clear_bt.ForeColor = System.Drawing.Color.Black
+        Me.clear_bt.Location = New System.Drawing.Point(311, 471)
+        Me.clear_bt.Name = "clear_bt"
+        Me.clear_bt.Size = New System.Drawing.Size(94, 29)
+        Me.clear_bt.TabIndex = 20
+        Me.clear_bt.Text = "Clear"
+        Me.clear_bt.UseVisualStyleBackColor = False
         '
-        'Button1
+        'calc_bt
         '
-        Me.Button1.BackColor = System.Drawing.Color.Silver
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(422, 471)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(135, 29)
-        Me.Button1.TabIndex = 19
-        Me.Button1.Text = "Calculate Rating"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.calc_bt.BackColor = System.Drawing.Color.Silver
+        Me.calc_bt.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.calc_bt.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.calc_bt.ForeColor = System.Drawing.Color.Black
+        Me.calc_bt.Location = New System.Drawing.Point(422, 471)
+        Me.calc_bt.Name = "calc_bt"
+        Me.calc_bt.Size = New System.Drawing.Size(135, 29)
+        Me.calc_bt.TabIndex = 19
+        Me.calc_bt.Text = "Calculate Rating"
+        Me.calc_bt.UseVisualStyleBackColor = False
         '
         'Label12
         '
@@ -345,14 +361,14 @@ Partial Class Form3
         Me.Label11.TabIndex = 18
         Me.Label11.Text = "Integrated"
         '
-        'TextBox8
+        'storage_use_txt
         '
-        Me.TextBox8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox8.ForeColor = System.Drawing.Color.White
-        Me.TextBox8.Location = New System.Drawing.Point(254, 188)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(98, 27)
-        Me.TextBox8.TabIndex = 17
+        Me.storage_use_txt.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.storage_use_txt.ForeColor = System.Drawing.Color.White
+        Me.storage_use_txt.Location = New System.Drawing.Point(254, 188)
+        Me.storage_use_txt.Name = "storage_use_txt"
+        Me.storage_use_txt.Size = New System.Drawing.Size(98, 27)
+        Me.storage_use_txt.TabIndex = 17
         '
         'Label9
         '
@@ -374,120 +390,111 @@ Partial Class Form3
         Me.Label8.TabIndex = 15
         Me.Label8.Text = "Used"
         '
-        'RadioButton2
+        'ded_rad
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.ForeColor = System.Drawing.Color.White
-        Me.RadioButton2.Location = New System.Drawing.Point(381, 356)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(186, 24)
-        Me.RadioButton2.TabIndex = 14
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Integrated + Dedicated"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.ded_rad.AutoSize = True
+        Me.ded_rad.ForeColor = System.Drawing.Color.White
+        Me.ded_rad.Location = New System.Drawing.Point(381, 356)
+        Me.ded_rad.Name = "ded_rad"
+        Me.ded_rad.Size = New System.Drawing.Size(186, 24)
+        Me.ded_rad.TabIndex = 14
+        Me.ded_rad.TabStop = True
+        Me.ded_rad.Text = "Integrated + Dedicated"
+        Me.ded_rad.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'int_rad
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.ForeColor = System.Drawing.Color.White
-        Me.RadioButton1.Location = New System.Drawing.Point(244, 356)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(131, 24)
-        Me.RadioButton1.TabIndex = 13
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Integrated only"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.int_rad.AutoSize = True
+        Me.int_rad.ForeColor = System.Drawing.Color.White
+        Me.int_rad.Location = New System.Drawing.Point(244, 355)
+        Me.int_rad.Name = "int_rad"
+        Me.int_rad.Size = New System.Drawing.Size(131, 24)
+        Me.int_rad.TabIndex = 13
+        Me.int_rad.TabStop = True
+        Me.int_rad.Text = "Integrated only"
+        Me.int_rad.UseVisualStyleBackColor = True
         '
-        'Label7
+        'gpu_lbl
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(30, 356)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(199, 23)
-        Me.Label7.TabIndex = 12
-        Me.Label7.Text = "Graphics Processing Unit"
+        Me.gpu_lbl.AutoSize = True
+        Me.gpu_lbl.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.gpu_lbl.ForeColor = System.Drawing.Color.White
+        Me.gpu_lbl.Location = New System.Drawing.Point(30, 356)
+        Me.gpu_lbl.Name = "gpu_lbl"
+        Me.gpu_lbl.Size = New System.Drawing.Size(199, 23)
+        Me.gpu_lbl.TabIndex = 12
+        Me.gpu_lbl.Text = "Graphics Processing Unit"
         '
-        'Label6
+        'cpu_lbl
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(60, 230)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(188, 23)
-        Me.Label6.TabIndex = 11
-        Me.Label6.Text = "Central Processing Unit"
+        Me.cpu_lbl.AutoSize = True
+        Me.cpu_lbl.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.cpu_lbl.ForeColor = System.Drawing.Color.White
+        Me.cpu_lbl.Location = New System.Drawing.Point(60, 230)
+        Me.cpu_lbl.Name = "cpu_lbl"
+        Me.cpu_lbl.Size = New System.Drawing.Size(188, 23)
+        Me.cpu_lbl.TabIndex = 11
+        Me.cpu_lbl.Text = "Central Processing Unit"
         '
-        'Label5
+        'storage_lbl
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(179, 117)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(69, 23)
-        Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Storage"
+        Me.storage_lbl.AutoSize = True
+        Me.storage_lbl.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.storage_lbl.ForeColor = System.Drawing.Color.White
+        Me.storage_lbl.Location = New System.Drawing.Point(179, 117)
+        Me.storage_lbl.Name = "storage_lbl"
+        Me.storage_lbl.Size = New System.Drawing.Size(69, 23)
+        Me.storage_lbl.TabIndex = 8
+        Me.storage_lbl.Text = "Storage"
         '
-        'Label4
+        'ram_lbl
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(200, 81)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(48, 23)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "RAM"
+        Me.ram_lbl.AutoSize = True
+        Me.ram_lbl.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ram_lbl.ForeColor = System.Drawing.Color.White
+        Me.ram_lbl.Location = New System.Drawing.Point(200, 81)
+        Me.ram_lbl.Name = "ram_lbl"
+        Me.ram_lbl.Size = New System.Drawing.Size(48, 23)
+        Me.ram_lbl.TabIndex = 7
+        Me.ram_lbl.Text = "RAM"
         '
-        'Label3
+        'os_lbl
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(101, 39)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(147, 23)
-        Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Operating System"
+        Me.os_lbl.AutoSize = True
+        Me.os_lbl.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.os_lbl.ForeColor = System.Drawing.Color.White
+        Me.os_lbl.Location = New System.Drawing.Point(101, 39)
+        Me.os_lbl.Name = "os_lbl"
+        Me.os_lbl.Size = New System.Drawing.Size(147, 23)
+        Me.os_lbl.TabIndex = 6
+        Me.os_lbl.Text = "Operating System"
         '
-        'TextBox6
+        'gpu_ded
         '
-        Me.TextBox6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox6.ForeColor = System.Drawing.Color.White
-        Me.TextBox6.Location = New System.Drawing.Point(244, 435)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(323, 27)
-        Me.TextBox6.TabIndex = 5
+        Me.gpu_ded.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.gpu_ded.ForeColor = System.Drawing.Color.White
+        Me.gpu_ded.Location = New System.Drawing.Point(244, 435)
+        Me.gpu_ded.Name = "gpu_ded"
+        Me.gpu_ded.Size = New System.Drawing.Size(323, 27)
+        Me.gpu_ded.TabIndex = 5
         '
-        'TextBox5
+        'gpu_int
         '
-        Me.TextBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox5.ForeColor = System.Drawing.Color.White
-        Me.TextBox5.Location = New System.Drawing.Point(254, 265)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(313, 27)
-        Me.TextBox5.TabIndex = 4
+        Me.gpu_int.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.gpu_int.ForeColor = System.Drawing.Color.White
+        Me.gpu_int.Location = New System.Drawing.Point(244, 399)
+        Me.gpu_int.Name = "gpu_int"
+        Me.gpu_int.Size = New System.Drawing.Size(323, 27)
+        Me.gpu_int.TabIndex = 3
         '
-        'TextBox4
+        'storage_tot_txt
         '
-        Me.TextBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox4.ForeColor = System.Drawing.Color.White
-        Me.TextBox4.Location = New System.Drawing.Point(244, 399)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(323, 27)
-        Me.TextBox4.TabIndex = 3
-        '
-        'TextBox3
-        '
-        Me.TextBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox3.ForeColor = System.Drawing.Color.White
-        Me.TextBox3.Location = New System.Drawing.Point(254, 152)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(98, 27)
-        Me.TextBox3.TabIndex = 2
+        Me.storage_tot_txt.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.storage_tot_txt.ForeColor = System.Drawing.Color.White
+        Me.storage_tot_txt.Location = New System.Drawing.Point(254, 152)
+        Me.storage_tot_txt.Name = "storage_tot_txt"
+        Me.storage_tot_txt.Size = New System.Drawing.Size(98, 27)
+        Me.storage_tot_txt.TabIndex = 2
         '
         'fexit_bt
         '
@@ -551,40 +558,40 @@ Partial Class Form3
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Label3 As Label
+    Friend WithEvents gpu_ded As TextBox
+    Friend WithEvents gpu_int As TextBox
+    Friend WithEvents storage_tot_txt As TextBox
+    Friend WithEvents os_lbl As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents descrip_txt As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents storage_use_txt As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents ded_rad As RadioButton
+    Friend WithEvents int_rad As RadioButton
+    Friend WithEvents gpu_lbl As Label
+    Friend WithEvents cpu_lbl As Label
+    Friend WithEvents storage_lbl As Label
+    Friend WithEvents ram_lbl As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents clear_bt As Button
+    Friend WithEvents calc_bt As Button
     Friend WithEvents Label13 As Label
     Friend WithEvents Button3 As Button
     Friend WithEvents Label14 As Label
     Friend WithEvents fexit_bt As PictureBox
     Friend WithEvents mini_bt As PictureBox
     Friend WithEvents close_bt As PictureBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents os_txt As ComboBox
     Friend WithEvents Label19 As Label
     Friend WithEvents Label18 As Label
-    Friend WithEvents Label17 As Label
+    Friend WithEvents cpugen_lbl As Label
     Friend WithEvents Label16 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents ram_box As ComboBox
     Friend WithEvents Label15 As Label
+    Friend WithEvents cpumfct_txt As ComboBox
+    Friend WithEvents cpugen_txt As ComboBox
 End Class

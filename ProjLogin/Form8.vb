@@ -46,10 +46,10 @@ Public Class Form8
                 If dr.GetString("us_id") = us_id_txt.Text Then
                     If dr.GetString("us_pwd") = us_pwd_txt.Text Then
                         MessageBox.Show("Login Successful")
-                        Form3.Show()
                         dr.Close()
                         con.Close()
                         cmd.Parameters.Clear()
+                        Form3.Show()
                         Me.Close()
                     Else
                         MessageBox.Show("The password you entered is incorrect")
@@ -65,6 +65,7 @@ Public Class Form8
                 MessageBox.Show("The User ID entered does not exist")
             End If
         End If
+
     End Sub
 
     Private Sub clear_bt_Click(sender As Object, e As EventArgs) Handles clear_bt.Click

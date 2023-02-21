@@ -189,10 +189,8 @@ Partial Class Form1
         Me.us_pwd_txt.ForeColor = System.Drawing.Color.Black
         Me.us_pwd_txt.Location = New System.Drawing.Point(33, 312)
         Me.us_pwd_txt.Name = "us_pwd_txt"
-        Me.us_pwd_txt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.us_pwd_txt.Size = New System.Drawing.Size(266, 27)
         Me.us_pwd_txt.TabIndex = 9
-        Me.us_pwd_txt.UseSystemPasswordChar = True
         '
         'Label4
         '

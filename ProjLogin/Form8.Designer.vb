@@ -110,6 +110,7 @@ Partial Class Form8
         Me.us_pwd_txt.Name = "us_pwd_txt"
         Me.us_pwd_txt.Size = New System.Drawing.Size(266, 20)
         Me.us_pwd_txt.TabIndex = 9
+        Me.us_pwd_txt.UseSystemPasswordChar = True
         '
         'Label4
         '

@@ -33,4 +33,112 @@ Public Class Form3
         End If
     End Sub
 
+    Private Sub cpu_lbl_hover(sender As Object, e As EventArgs) Handles cpu_lbl.MouseHover
+        descrip_txt.Text = "A central processing unit (CPU), also called a central processor, main processor or just processor, is the electronic circuitry that executes instructions comprising a computer program. It is essentially the brain of your computer. Please enter your CPU's manufacturer and sub brand as well as its generation in the provided inputs."
+    End Sub
+    Private Sub os_lbl_hover(sender As Object, e As EventArgs) Handles os_lbl.MouseHover
+        descrip_txt.Text = "An operating system (OS) is system software that manages computer hardware, software resources, and provides common services for computer programs. Please enter your operating system in the provided input."
+    End Sub
+    Private Sub ram_lbl_hover(sender As Object, e As EventArgs) Handles ram_lbl.MouseHover
+        descrip_txt.Text = "RAM (Random Access Memory) is the hardware in a computing device where the operating system (OS), application programs and data in current use are kept so they can be quickly reached by the device's processor. RAM is your computer's main or primary memory. Please enter your system's total RAM in the provided input."
+    End Sub
+    Private Sub storage_lbl_hover(sender As Object, e As EventArgs) Handles storage_lbl.MouseHover
+        descrip_txt.Text = "Computer data storage is a technology consisting of computer components and recording media that are used to retain digital data. It is a core function and fundamental component of computers. Please enter your system's total as well as used storage in the provided inputs."
+    End Sub
+    Private Sub gpu_lbl_hover(sender As Object, e As EventArgs) Handles gpu_lbl.MouseHover
+        descrip_txt.Text = "A graphics processing unit (GPU) is a specialized electronic circuit designed to manipulate and alter memory to accelerate the creation of images in a frame buffer intended for output to a display device. Please enter the name of your GPU in the provided input"
+    End Sub
+
+
+    Dim HasIntel As Boolean
+    Dim HasAMD As Boolean
+    Private Sub cpumfct_txt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cpumfct_txt.SelectedIndexChanged
+        HasIntel = False
+        HasAMD = False
+        If cpumfct_txt.Text = "Intel i3" Or cpumfct_txt.Text = "Intel i5" Or cpumfct_txt.Text = "Intel i7" Then
+            HasIntel = True
+            cpugen_txt.Items.Add("1st")
+            cpugen_txt.Items.Add("2nd")
+            cpugen_txt.Items.Add("3rd")
+            cpugen_txt.Items.Add("4th")
+            cpugen_txt.Items.Add("5th")
+            cpugen_txt.Items.Add("6th")
+            cpugen_txt.Items.Add("7th")
+            cpugen_txt.Items.Add("8th")
+            cpugen_txt.Items.Add("9th")
+            cpugen_txt.Items.Add("10th")
+            cpugen_txt.Items.Add("11th")
+            cpugen_txt.Items.Add("12th")
+            cpugen_txt.Items.Add("13th")
+        ElseIf cpumfct_txt.Text = "Ryzen 3" Or cpumfct_txt.Text = "Ryzen 5" Or cpumfct_txt.Text = "Ryzen 7" Then
+            HasAMD = True
+            cpugen_txt.Items.Add("1st")
+            cpugen_txt.Items.Add("2nd")
+            cpugen_txt.Items.Add("3rd")
+            cpugen_txt.Items.Add("4th")
+            cpugen_txt.Items.Add("5th")
+            cpugen_txt.Items.Add("6th")
+            cpugen_txt.Items.Add("7th")
+        End If
+    End Sub
+
+    Public HasGPU As Boolean
+    Public SysRate As Double
+
+    Private Sub int_rad_CheckedChanged(sender As Object, e As EventArgs) Handles int_rad.CheckedChanged, ded_rad.CheckedChanged
+        If int_rad.Checked = True Then
+            HasGPU = False
+            gpu_ded.Visible = False
+        ElseIf ded_rad.Checked = True Then
+            HasGPU = True
+            gpu_ded.Visible = True
+        End If
+    End Sub
+
+    Private Sub calc_bt_Click(sender As Object, e As EventArgs) Handles calc_bt.Click
+
+        SysRate = 0
+
+        If HasGPU = True Then
+            SysRate += 3
+        End If
+
+        If ram_box.Text = "2" Then
+            SysRate += 0
+        ElseIf ram_box.Text = "4" Then
+            SysRate += 1
+        ElseIf ram_box.Text = "8" Or "12" Then
+            SysRate += 2
+        Else
+            SysRate += 3
+        End If
+
+        If HasIntel = True Then
+            If cpugen_txt.Text = "1st" Or cpugen_txt.Text = "2nd" Or cpugen_txt.Text = "3rd" Then
+                SysRate += 0
+            ElseIf cpugen_txt.Text = "4th" Or cpugen_txt.Text = "5th" Or cpugen_txt.Text = "6th" Then
+                SysRate += 1
+            ElseIf cpugen_txt.Text = "7th" Or cpugen_txt.Text = "8th" Or cpugen_txt.Text = "9th" Then
+                SysRate += 2
+            Else
+                SysRate += 3
+            End If
+        End If
+
+        If HasAMD = True Then
+            If cpugen_txt.Text = "1st" Or cpugen_txt.Text = "2nd" Then
+                SysRate += 1
+            ElseIf cpugen_txt.Text = "3rd" Or cpugen_txt.Text = "4th" Or cpugen_txt.Text = "5th" Then
+                SysRate += 2
+            Else
+                SysRate += 3
+            End If
+        End If
+
+        If HasAMD = False And HasIntel = False Then
+            SysRate += 0
+        End If
+
+    End Sub
+
 End Class

@@ -35,6 +35,8 @@ Public Class Form1
         End If
     End Sub
 
+    Public UserID As String
+
     Private Sub Continues(sender As Object, e As EventArgs) Handles cont_bt.Click
         Dim repcred As Boolean = False
         Dim connString As String = "datasource=localhost; uid=root; pwd=Chs55432; database=plitdb"
@@ -54,10 +56,8 @@ Public Class Form1
         If us_email_txt.Text = "" Or us_id_txt.Text = "" Or us_phno_txt.Text = "" Or us_pwd_txt.Text = "" Or us_name_txt.Text = "" Then
             MessageBox.Show("Please fill all your details")
         ElseIf repcred = True Then
-            MessageBox.Show("The ID, email address and/or phone number entered seem to already exist in our database")
+            MessageBox.Show("The ID, email address and/or phone number entered seem(s) to already exist in our database")
         Else
-            'Dim cmd As New MySqlCommand
-            'cmd.Connection = con
             cmd.CommandText = "INSERT into user_reg (us_id, us_pwd, us_name, us_email, us_phone) values (@v1, @v2, @v3, @v4, @v5);
                                INSERT into user_login values (@v1, @v2)"
             cmd.Parameters.AddWithValue("@v1", us_id_txt.Text)
@@ -70,10 +70,13 @@ Public Class Form1
             con.Close()
             MessageBox.Show("Account created")
             cmd.Parameters.Clear()
+            UserID = us_id_txt.Text
             Form3.Show()
             Me.Hide()
         End If
     End Sub
+
+
 
     Private Sub AdminSwitch(sender As Object, e As EventArgs) Handles switchadmin_bt.Click
         If MsgBox("Are you sure you want to switch to admin options?", vbQuestion Or vbYesNo Or vbDefaultButton2, "Swicthing to Admin") = vbYes Then
