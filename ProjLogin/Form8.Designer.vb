@@ -104,11 +104,10 @@ Partial Class Form8
         'us_pwd_txt
         '
         Me.us_pwd_txt.BackColor = System.Drawing.Color.White
-        Me.us_pwd_txt.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.us_pwd_txt.ForeColor = System.Drawing.Color.Black
         Me.us_pwd_txt.Location = New System.Drawing.Point(31, 235)
         Me.us_pwd_txt.Name = "us_pwd_txt"
-        Me.us_pwd_txt.Size = New System.Drawing.Size(266, 20)
+        Me.us_pwd_txt.Size = New System.Drawing.Size(266, 27)
         Me.us_pwd_txt.TabIndex = 9
         Me.us_pwd_txt.UseSystemPasswordChar = True
         '
@@ -152,11 +151,10 @@ Partial Class Form8
         'us_id_txt
         '
         Me.us_id_txt.BackColor = System.Drawing.Color.White
-        Me.us_id_txt.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.us_id_txt.ForeColor = System.Drawing.Color.Black
         Me.us_id_txt.Location = New System.Drawing.Point(31, 171)
         Me.us_id_txt.Name = "us_id_txt"
-        Me.us_id_txt.Size = New System.Drawing.Size(266, 20)
+        Me.us_id_txt.Size = New System.Drawing.Size(266, 27)
         Me.us_id_txt.TabIndex = 4
         '
         'cont_bt

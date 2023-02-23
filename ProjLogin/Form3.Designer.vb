@@ -27,7 +27,7 @@ Partial Class Form3
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.sysrate_lbl = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.cont_bt = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.descrip_txt = New System.Windows.Forms.TextBox()
@@ -44,7 +44,7 @@ Partial Class Form3
         Me.os_txt = New System.Windows.Forms.ComboBox()
         Me.clear_bt = New System.Windows.Forms.Button()
         Me.calc_bt = New System.Windows.Forms.Button()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.gpu_ded_lbl = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.storage_use_txt = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -62,6 +62,7 @@ Partial Class Form3
         Me.fexit_bt = New System.Windows.Forms.PictureBox()
         Me.mini_bt = New System.Windows.Forms.PictureBox()
         Me.close_bt = New System.Windows.Forms.PictureBox()
+        Me.skip_bt = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -99,7 +100,7 @@ Partial Class Form3
         '
         Me.Panel1.BackColor = System.Drawing.Color.Navy
         Me.Panel1.Controls.Add(Me.sysrate_lbl)
-        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.cont_bt)
         Me.Panel1.Controls.Add(Me.Label13)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.GroupBox1)
@@ -119,18 +120,18 @@ Partial Class Form3
         Me.sysrate_lbl.TabIndex = 21
         Me.sysrate_lbl.Text = "Rating"
         '
-        'Button3
+        'cont_bt
         '
-        Me.Button3.BackColor = System.Drawing.Color.Silver
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Location = New System.Drawing.Point(925, 499)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(94, 29)
-        Me.Button3.TabIndex = 20
-        Me.Button3.Text = "Continue"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.cont_bt.BackColor = System.Drawing.Color.Silver
+        Me.cont_bt.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cont_bt.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.cont_bt.ForeColor = System.Drawing.Color.Black
+        Me.cont_bt.Location = New System.Drawing.Point(925, 499)
+        Me.cont_bt.Name = "cont_bt"
+        Me.cont_bt.Size = New System.Drawing.Size(94, 29)
+        Me.cont_bt.TabIndex = 20
+        Me.cont_bt.Text = "Continue"
+        Me.cont_bt.UseVisualStyleBackColor = False
         '
         'Label13
         '
@@ -196,7 +197,7 @@ Partial Class Form3
         Me.GroupBox1.Controls.Add(Me.os_txt)
         Me.GroupBox1.Controls.Add(Me.clear_bt)
         Me.GroupBox1.Controls.Add(Me.calc_bt)
-        Me.GroupBox1.Controls.Add(Me.Label12)
+        Me.GroupBox1.Controls.Add(Me.gpu_ded_lbl)
         Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.storage_use_txt)
         Me.GroupBox1.Controls.Add(Me.Label9)
@@ -222,7 +223,7 @@ Partial Class Form3
         'cpugen_txt
         '
         Me.cpugen_txt.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.cpugen_txt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cpugen_txt.DisplayMember = "Integer"
         Me.cpugen_txt.ForeColor = System.Drawing.Color.White
         Me.cpugen_txt.FormattingEnabled = True
         Me.cpugen_txt.Location = New System.Drawing.Point(254, 306)
@@ -342,15 +343,15 @@ Partial Class Form3
         Me.calc_bt.Text = "Calculate Rating"
         Me.calc_bt.UseVisualStyleBackColor = False
         '
-        'Label12
+        'gpu_ded_lbl
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(160, 435)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(78, 20)
-        Me.Label12.TabIndex = 19
-        Me.Label12.Text = "Dedicated"
+        Me.gpu_ded_lbl.AutoSize = True
+        Me.gpu_ded_lbl.ForeColor = System.Drawing.Color.White
+        Me.gpu_ded_lbl.Location = New System.Drawing.Point(160, 435)
+        Me.gpu_ded_lbl.Name = "gpu_ded_lbl"
+        Me.gpu_ded_lbl.Size = New System.Drawing.Size(78, 20)
+        Me.gpu_ded_lbl.TabIndex = 19
+        Me.gpu_ded_lbl.Text = "Dedicated"
         '
         'Label11
         '
@@ -527,12 +528,26 @@ Partial Class Form3
         Me.close_bt.TabIndex = 21
         Me.close_bt.TabStop = False
         '
+        'skip_bt
+        '
+        Me.skip_bt.BackColor = System.Drawing.Color.LightGray
+        Me.skip_bt.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.skip_bt.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.skip_bt.ForeColor = System.Drawing.Color.Black
+        Me.skip_bt.Location = New System.Drawing.Point(991, 79)
+        Me.skip_bt.Name = "skip_bt"
+        Me.skip_bt.Size = New System.Drawing.Size(94, 29)
+        Me.skip_bt.TabIndex = 34
+        Me.skip_bt.Text = "Skip"
+        Me.skip_bt.UseVisualStyleBackColor = False
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1110, 700)
+        Me.Controls.Add(Me.skip_bt)
         Me.Controls.Add(Me.fexit_bt)
         Me.Controls.Add(Me.mini_bt)
         Me.Controls.Add(Me.close_bt)
@@ -576,12 +591,12 @@ Partial Class Form3
     Friend WithEvents cpu_lbl As Label
     Friend WithEvents storage_lbl As Label
     Friend WithEvents ram_lbl As Label
-    Friend WithEvents Label12 As Label
+    Friend WithEvents gpu_ded_lbl As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents clear_bt As Button
     Friend WithEvents calc_bt As Button
     Friend WithEvents Label13 As Label
-    Friend WithEvents Button3 As Button
+    Friend WithEvents cont_bt As Button
     Friend WithEvents sysrate_lbl As Label
     Friend WithEvents fexit_bt As PictureBox
     Friend WithEvents mini_bt As PictureBox
@@ -595,4 +610,5 @@ Partial Class Form3
     Friend WithEvents Label15 As Label
     Friend WithEvents cpumfct_txt As ComboBox
     Friend WithEvents cpugen_txt As ComboBox
+    Friend WithEvents skip_bt As Button
 End Class

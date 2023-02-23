@@ -33,6 +33,7 @@ Public Class Form8
         End If
     End Sub
 
+    Public UserID As String
     Private Sub Continues(sender As Object, e As EventArgs) Handles cont_bt.Click
         If us_id_txt.Text = "" Or us_pwd_txt.Text = "" Then
             MessageBox.Show("Please fill all your details")
@@ -49,6 +50,7 @@ Public Class Form8
                         dr.Close()
                         con.Close()
                         cmd.Parameters.Clear()
+                        UserID = us_id_txt.Text
                         Form3.Show()
                         Me.Close()
                     Else

@@ -35,8 +35,6 @@ Public Class Form1
         End If
     End Sub
 
-    Public UserID As String
-
     Private Sub Continues(sender As Object, e As EventArgs) Handles cont_bt.Click
         Dim repcred As Boolean = False
         Dim connString As String = "datasource=localhost; uid=root; pwd=Chs55432; database=plitdb"
@@ -70,13 +68,10 @@ Public Class Form1
             con.Close()
             MessageBox.Show("Account created")
             cmd.Parameters.Clear()
-            UserID = us_id_txt.Text
-            Form3.Show()
+            Form8.Show()
             Me.Hide()
         End If
     End Sub
-
-
 
     Private Sub AdminSwitch(sender As Object, e As EventArgs) Handles switchadmin_bt.Click
         If MsgBox("Are you sure you want to switch to admin options?", vbQuestion Or vbYesNo Or vbDefaultButton2, "Swicthing to Admin") = vbYes Then
