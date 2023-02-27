@@ -25,47 +25,91 @@ Partial Class Form4
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form4))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.fexit_bt = New System.Windows.Forms.PictureBox()
         Me.mini_bt = New System.Windows.Forms.PictureBox()
         Me.close_bt = New System.Windows.Forms.PictureBox()
-        Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ItemCat = New System.Windows.Forms.Panel()
+        Me.L24 = New System.Windows.Forms.Label()
+        Me.B24 = New System.Windows.Forms.PictureBox()
+        Me.L18 = New System.Windows.Forms.Label()
+        Me.B18 = New System.Windows.Forms.PictureBox()
+        Me.L12 = New System.Windows.Forms.Label()
+        Me.B12 = New System.Windows.Forms.PictureBox()
+        Me.L6 = New System.Windows.Forms.Label()
+        Me.B6 = New System.Windows.Forms.PictureBox()
+        Me.L23 = New System.Windows.Forms.Label()
+        Me.B23 = New System.Windows.Forms.PictureBox()
+        Me.L22 = New System.Windows.Forms.Label()
+        Me.B22 = New System.Windows.Forms.PictureBox()
+        Me.L21 = New System.Windows.Forms.Label()
+        Me.B21 = New System.Windows.Forms.PictureBox()
+        Me.L20 = New System.Windows.Forms.Label()
+        Me.B20 = New System.Windows.Forms.PictureBox()
+        Me.L19 = New System.Windows.Forms.Label()
+        Me.B19 = New System.Windows.Forms.PictureBox()
+        Me.L17 = New System.Windows.Forms.Label()
+        Me.B17 = New System.Windows.Forms.PictureBox()
+        Me.L16 = New System.Windows.Forms.Label()
+        Me.B16 = New System.Windows.Forms.PictureBox()
+        Me.L15 = New System.Windows.Forms.Label()
+        Me.B15 = New System.Windows.Forms.PictureBox()
+        Me.L14 = New System.Windows.Forms.Label()
+        Me.B14 = New System.Windows.Forms.PictureBox()
+        Me.L13 = New System.Windows.Forms.Label()
+        Me.B13 = New System.Windows.Forms.PictureBox()
+        Me.L11 = New System.Windows.Forms.Label()
+        Me.B11 = New System.Windows.Forms.PictureBox()
+        Me.L10 = New System.Windows.Forms.Label()
+        Me.B10 = New System.Windows.Forms.PictureBox()
+        Me.L9 = New System.Windows.Forms.Label()
+        Me.B9 = New System.Windows.Forms.PictureBox()
+        Me.L8 = New System.Windows.Forms.Label()
+        Me.B8 = New System.Windows.Forms.PictureBox()
+        Me.L7 = New System.Windows.Forms.Label()
+        Me.B7 = New System.Windows.Forms.PictureBox()
+        Me.L5 = New System.Windows.Forms.Label()
+        Me.B5 = New System.Windows.Forms.PictureBox()
+        Me.L4 = New System.Windows.Forms.Label()
+        Me.B4 = New System.Windows.Forms.PictureBox()
+        Me.L3 = New System.Windows.Forms.Label()
+        Me.B3 = New System.Windows.Forms.PictureBox()
+        Me.L2 = New System.Windows.Forms.Label()
+        Me.B2 = New System.Windows.Forms.PictureBox()
+        Me.L1 = New System.Windows.Forms.Label()
+        Me.B1 = New System.Windows.Forms.PictureBox()
+        Me.cartpic = New System.Windows.Forms.PictureBox()
+        Me.cart_bt = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.fexit_bt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.mini_bt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.close_bt, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ItemCat.SuspendLayout()
+        CType(Me.B24, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B23, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B22, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B21, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B20, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B19, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.B1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cartpic, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -75,7 +119,7 @@ Partial Class Form4
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Variable Display Semib", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label1.Location = New System.Drawing.Point(1, 2)
+        Me.Label1.Location = New System.Drawing.Point(12, 3)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(208, 53)
         Me.Label1.TabIndex = 12
@@ -85,307 +129,17 @@ Partial Class Form4
         'TextBox1
         '
         Me.TextBox1.BackColor = System.Drawing.Color.Black
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox1.ForeColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(382, 20)
+        Me.TextBox1.Location = New System.Drawing.Point(829, 97)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.PlaceholderText = "Search here..."
         Me.TextBox1.Size = New System.Drawing.Size(350, 27)
         Me.TextBox1.TabIndex = 13
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.Navy
-        Me.Panel1.Controls.Add(Me.Label14)
-        Me.Panel1.Controls.Add(Me.Button6)
-        Me.Panel1.Controls.Add(Me.Button5)
-        Me.Panel1.Controls.Add(Me.Button4)
-        Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.Label13)
-        Me.Panel1.Controls.Add(Me.Label12)
-        Me.Panel1.Controls.Add(Me.Label11)
-        Me.Panel1.Controls.Add(Me.Label10)
-        Me.Panel1.Controls.Add(Me.Label8)
-        Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Label9)
-        Me.Panel1.Controls.Add(Me.PictureBox9)
-        Me.Panel1.Controls.Add(Me.PictureBox8)
-        Me.Panel1.Controls.Add(Me.PictureBox7)
-        Me.Panel1.Controls.Add(Me.PictureBox6)
-        Me.Panel1.Controls.Add(Me.PictureBox5)
-        Me.Panel1.Controls.Add(Me.PictureBox2)
-        Me.Panel1.Location = New System.Drawing.Point(12, 65)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1086, 623)
-        Me.Panel1.TabIndex = 14
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.ForeColor = System.Drawing.Color.White
-        Me.Label14.Location = New System.Drawing.Point(439, 571)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(189, 20)
-        Me.Label14.TabIndex = 34
-        Me.Label14.Text = "<Page navigation buttons>"
-        '
-        'Button6
-        '
-        Me.Button6.BackColor = System.Drawing.Color.LightGray
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button6.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button6.ForeColor = System.Drawing.Color.Black
-        Me.Button6.Location = New System.Drawing.Point(845, 507)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(117, 29)
-        Me.Button6.TabIndex = 33
-        Me.Button6.Text = "Requirements"
-        Me.Button6.UseVisualStyleBackColor = False
-        '
-        'Button5
-        '
-        Me.Button5.BackColor = System.Drawing.Color.LightGray
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button5.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button5.ForeColor = System.Drawing.Color.Black
-        Me.Button5.Location = New System.Drawing.Point(472, 507)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(117, 29)
-        Me.Button5.TabIndex = 32
-        Me.Button5.Text = "Requirements"
-        Me.Button5.UseVisualStyleBackColor = False
-        '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.LightGray
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button4.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button4.ForeColor = System.Drawing.Color.Black
-        Me.Button4.Location = New System.Drawing.Point(110, 507)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(117, 29)
-        Me.Button4.TabIndex = 31
-        Me.Button4.Text = "Requirements"
-        Me.Button4.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.LightGray
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Location = New System.Drawing.Point(845, 237)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(117, 29)
-        Me.Button3.TabIndex = 30
-        Me.Button3.Text = "Requirements"
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.LightGray
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(477, 236)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(117, 29)
-        Me.Button1.TabIndex = 29
-        Me.Button1.Text = "Requirements"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(863, 384)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(72, 20)
-        Me.Label13.TabIndex = 28
-        Me.Label13.Text = "Product 6"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(497, 384)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(72, 20)
-        Me.Label12.TabIndex = 27
-        Me.Label12.Text = "Product 5"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(137, 384)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(72, 20)
-        Me.Label11.TabIndex = 26
-        Me.Label11.Text = "Product 3"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(863, 115)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(72, 20)
-        Me.Label10.TabIndex = 25
-        Me.Label10.Text = "Product 3"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(497, 115)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(72, 20)
-        Me.Label8.TabIndex = 24
-        Me.Label8.Text = "Product 2"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(137, 115)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(72, 20)
-        Me.Label7.TabIndex = 23
-        Me.Label7.Text = "Product 1"
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.LightGray
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(115, 237)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(117, 29)
-        Me.Button2.TabIndex = 21
-        Me.Button2.Text = "Requirements"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(881, 484)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(41, 20)
-        Me.Label6.TabIndex = 22
-        Me.Label6.Text = "Price"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(515, 484)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(41, 20)
-        Me.Label5.TabIndex = 21
-        Me.Label5.Text = "Price"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(152, 484)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(41, 20)
-        Me.Label4.TabIndex = 20
-        Me.Label4.Text = "Price"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(515, 214)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(41, 20)
-        Me.Label3.TabIndex = 19
-        Me.Label3.Text = "Price"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(881, 214)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(41, 20)
-        Me.Label2.TabIndex = 18
-        Me.Label2.Text = "Price"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(152, 214)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(41, 20)
-        Me.Label9.TabIndex = 17
-        Me.Label9.Text = "Price"
-        '
-        'PictureBox9
-        '
-        Me.PictureBox9.Location = New System.Drawing.Point(837, 309)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(125, 172)
-        Me.PictureBox9.TabIndex = 5
-        Me.PictureBox9.TabStop = False
-        '
-        'PictureBox8
-        '
-        Me.PictureBox8.Location = New System.Drawing.Point(472, 309)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(125, 172)
-        Me.PictureBox8.TabIndex = 4
-        Me.PictureBox8.TabStop = False
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.Location = New System.Drawing.Point(110, 309)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(125, 172)
-        Me.PictureBox7.TabIndex = 3
-        Me.PictureBox7.TabStop = False
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.Location = New System.Drawing.Point(837, 39)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(125, 172)
-        Me.PictureBox6.TabIndex = 2
-        Me.PictureBox6.TabStop = False
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.Location = New System.Drawing.Point(472, 39)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(125, 172)
-        Me.PictureBox5.TabIndex = 1
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Location = New System.Drawing.Point(110, 39)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(125, 172)
-        Me.PictureBox2.TabIndex = 0
-        Me.PictureBox2.TabStop = False
-        '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(738, 9)
+        Me.PictureBox1.Location = New System.Drawing.Point(1185, 86)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(49, 46)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -395,7 +149,7 @@ Partial Class Form4
         'fexit_bt
         '
         Me.fexit_bt.Image = CType(resources.GetObject("fexit_bt.Image"), System.Drawing.Image)
-        Me.fexit_bt.Location = New System.Drawing.Point(982, 9)
+        Me.fexit_bt.Location = New System.Drawing.Point(1117, 12)
         Me.fexit_bt.Name = "fexit_bt"
         Me.fexit_bt.Size = New System.Drawing.Size(35, 30)
         Me.fexit_bt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -405,7 +159,7 @@ Partial Class Form4
         'mini_bt
         '
         Me.mini_bt.Image = CType(resources.GetObject("mini_bt.Image"), System.Drawing.Image)
-        Me.mini_bt.Location = New System.Drawing.Point(1023, 9)
+        Me.mini_bt.Location = New System.Drawing.Point(1158, 12)
         Me.mini_bt.Name = "mini_bt"
         Me.mini_bt.Size = New System.Drawing.Size(35, 30)
         Me.mini_bt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -415,75 +169,728 @@ Partial Class Form4
         'close_bt
         '
         Me.close_bt.Image = CType(resources.GetObject("close_bt.Image"), System.Drawing.Image)
-        Me.close_bt.Location = New System.Drawing.Point(1064, 9)
+        Me.close_bt.Location = New System.Drawing.Point(1199, 12)
         Me.close_bt.Name = "close_bt"
         Me.close_bt.Size = New System.Drawing.Size(34, 30)
         Me.close_bt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.close_bt.TabIndex = 21
         Me.close_bt.TabStop = False
         '
+        'ItemCat
+        '
+        Me.ItemCat.BackColor = System.Drawing.Color.Navy
+        Me.ItemCat.Controls.Add(Me.L24)
+        Me.ItemCat.Controls.Add(Me.B24)
+        Me.ItemCat.Controls.Add(Me.L18)
+        Me.ItemCat.Controls.Add(Me.B18)
+        Me.ItemCat.Controls.Add(Me.L12)
+        Me.ItemCat.Controls.Add(Me.B12)
+        Me.ItemCat.Controls.Add(Me.L6)
+        Me.ItemCat.Controls.Add(Me.B6)
+        Me.ItemCat.Controls.Add(Me.L23)
+        Me.ItemCat.Controls.Add(Me.B23)
+        Me.ItemCat.Controls.Add(Me.L22)
+        Me.ItemCat.Controls.Add(Me.B22)
+        Me.ItemCat.Controls.Add(Me.L21)
+        Me.ItemCat.Controls.Add(Me.B21)
+        Me.ItemCat.Controls.Add(Me.L20)
+        Me.ItemCat.Controls.Add(Me.B20)
+        Me.ItemCat.Controls.Add(Me.L19)
+        Me.ItemCat.Controls.Add(Me.B19)
+        Me.ItemCat.Controls.Add(Me.L17)
+        Me.ItemCat.Controls.Add(Me.B17)
+        Me.ItemCat.Controls.Add(Me.L16)
+        Me.ItemCat.Controls.Add(Me.B16)
+        Me.ItemCat.Controls.Add(Me.L15)
+        Me.ItemCat.Controls.Add(Me.B15)
+        Me.ItemCat.Controls.Add(Me.L14)
+        Me.ItemCat.Controls.Add(Me.B14)
+        Me.ItemCat.Controls.Add(Me.L13)
+        Me.ItemCat.Controls.Add(Me.B13)
+        Me.ItemCat.Controls.Add(Me.L11)
+        Me.ItemCat.Controls.Add(Me.B11)
+        Me.ItemCat.Controls.Add(Me.L10)
+        Me.ItemCat.Controls.Add(Me.B10)
+        Me.ItemCat.Controls.Add(Me.L9)
+        Me.ItemCat.Controls.Add(Me.B9)
+        Me.ItemCat.Controls.Add(Me.L8)
+        Me.ItemCat.Controls.Add(Me.B8)
+        Me.ItemCat.Controls.Add(Me.L7)
+        Me.ItemCat.Controls.Add(Me.B7)
+        Me.ItemCat.Controls.Add(Me.L5)
+        Me.ItemCat.Controls.Add(Me.B5)
+        Me.ItemCat.Controls.Add(Me.L4)
+        Me.ItemCat.Controls.Add(Me.B4)
+        Me.ItemCat.Controls.Add(Me.L3)
+        Me.ItemCat.Controls.Add(Me.B3)
+        Me.ItemCat.Controls.Add(Me.L2)
+        Me.ItemCat.Controls.Add(Me.B2)
+        Me.ItemCat.Controls.Add(Me.L1)
+        Me.ItemCat.Controls.Add(Me.B1)
+        Me.ItemCat.Location = New System.Drawing.Point(12, 142)
+        Me.ItemCat.Name = "ItemCat"
+        Me.ItemCat.Size = New System.Drawing.Size(1221, 546)
+        Me.ItemCat.TabIndex = 14
+        '
+        'L24
+        '
+        Me.L24.AutoEllipsis = True
+        Me.L24.AutoSize = True
+        Me.L24.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L24.ForeColor = System.Drawing.Color.White
+        Me.L24.Location = New System.Drawing.Point(979, 469)
+        Me.L24.Name = "L24"
+        Me.L24.Size = New System.Drawing.Size(153, 28)
+        Me.L24.TabIndex = 117
+        Me.L24.Text = "Microsoft Word"
+        '
+        'B24
+        '
+        Me.B24.Image = CType(resources.GetObject("B24.Image"), System.Drawing.Image)
+        Me.B24.Location = New System.Drawing.Point(907, 469)
+        Me.B24.Name = "B24"
+        Me.B24.Size = New System.Drawing.Size(66, 58)
+        Me.B24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B24.TabIndex = 116
+        Me.B24.TabStop = False
+        '
+        'L18
+        '
+        Me.L18.AutoEllipsis = True
+        Me.L18.AutoSize = True
+        Me.L18.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L18.ForeColor = System.Drawing.Color.White
+        Me.L18.Location = New System.Drawing.Point(681, 469)
+        Me.L18.Name = "L18"
+        Me.L18.Size = New System.Drawing.Size(82, 28)
+        Me.L18.TabIndex = 115
+        Me.L18.Text = "Blender"
+        '
+        'B18
+        '
+        Me.B18.Image = CType(resources.GetObject("B18.Image"), System.Drawing.Image)
+        Me.B18.Location = New System.Drawing.Point(609, 469)
+        Me.B18.Name = "B18"
+        Me.B18.Size = New System.Drawing.Size(66, 58)
+        Me.B18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B18.TabIndex = 114
+        Me.B18.TabStop = False
+        '
+        'L12
+        '
+        Me.L12.AutoEllipsis = True
+        Me.L12.AutoSize = True
+        Me.L12.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L12.ForeColor = System.Drawing.Color.White
+        Me.L12.Location = New System.Drawing.Point(392, 469)
+        Me.L12.Name = "L12"
+        Me.L12.Size = New System.Drawing.Size(183, 28)
+        Me.L12.TabIndex = 113
+        Me.L12.Text = "Visual Studio Code"
+        '
+        'B12
+        '
+        Me.B12.Image = CType(resources.GetObject("B12.Image"), System.Drawing.Image)
+        Me.B12.Location = New System.Drawing.Point(320, 469)
+        Me.B12.Name = "B12"
+        Me.B12.Size = New System.Drawing.Size(66, 58)
+        Me.B12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B12.TabIndex = 112
+        Me.B12.TabStop = False
+        '
+        'L6
+        '
+        Me.L6.AutoEllipsis = True
+        Me.L6.AutoSize = True
+        Me.L6.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L6.ForeColor = System.Drawing.Color.White
+        Me.L6.Location = New System.Drawing.Point(97, 469)
+        Me.L6.Name = "L6"
+        Me.L6.Size = New System.Drawing.Size(117, 28)
+        Me.L6.TabIndex = 111
+        Me.L6.Text = "Libre Office"
+        '
+        'B6
+        '
+        Me.B6.Image = CType(resources.GetObject("B6.Image"), System.Drawing.Image)
+        Me.B6.Location = New System.Drawing.Point(25, 469)
+        Me.B6.Name = "B6"
+        Me.B6.Size = New System.Drawing.Size(66, 58)
+        Me.B6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B6.TabIndex = 110
+        Me.B6.TabStop = False
+        '
+        'L23
+        '
+        Me.L23.AutoEllipsis = True
+        Me.L23.AutoSize = True
+        Me.L23.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L23.ForeColor = System.Drawing.Color.White
+        Me.L23.Location = New System.Drawing.Point(979, 377)
+        Me.L23.Name = "L23"
+        Me.L23.Size = New System.Drawing.Size(153, 28)
+        Me.L23.TabIndex = 109
+        Me.L23.Text = "Microsoft Word"
+        '
+        'B23
+        '
+        Me.B23.Image = CType(resources.GetObject("B23.Image"), System.Drawing.Image)
+        Me.B23.Location = New System.Drawing.Point(907, 377)
+        Me.B23.Name = "B23"
+        Me.B23.Size = New System.Drawing.Size(66, 58)
+        Me.B23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B23.TabIndex = 108
+        Me.B23.TabStop = False
+        '
+        'L22
+        '
+        Me.L22.AutoEllipsis = True
+        Me.L22.AutoSize = True
+        Me.L22.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L22.ForeColor = System.Drawing.Color.White
+        Me.L22.Location = New System.Drawing.Point(979, 288)
+        Me.L22.Name = "L22"
+        Me.L22.Size = New System.Drawing.Size(153, 28)
+        Me.L22.TabIndex = 107
+        Me.L22.Text = "Microsoft Word"
+        '
+        'B22
+        '
+        Me.B22.Image = CType(resources.GetObject("B22.Image"), System.Drawing.Image)
+        Me.B22.Location = New System.Drawing.Point(907, 288)
+        Me.B22.Name = "B22"
+        Me.B22.Size = New System.Drawing.Size(66, 58)
+        Me.B22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B22.TabIndex = 106
+        Me.B22.TabStop = False
+        '
+        'L21
+        '
+        Me.L21.AutoEllipsis = True
+        Me.L21.AutoSize = True
+        Me.L21.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L21.ForeColor = System.Drawing.Color.White
+        Me.L21.Location = New System.Drawing.Point(979, 199)
+        Me.L21.Name = "L21"
+        Me.L21.Size = New System.Drawing.Size(153, 28)
+        Me.L21.TabIndex = 105
+        Me.L21.Text = "Microsoft Word"
+        '
+        'B21
+        '
+        Me.B21.Image = CType(resources.GetObject("B21.Image"), System.Drawing.Image)
+        Me.B21.Location = New System.Drawing.Point(907, 199)
+        Me.B21.Name = "B21"
+        Me.B21.Size = New System.Drawing.Size(66, 58)
+        Me.B21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B21.TabIndex = 104
+        Me.B21.TabStop = False
+        '
+        'L20
+        '
+        Me.L20.AutoEllipsis = True
+        Me.L20.AutoSize = True
+        Me.L20.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L20.ForeColor = System.Drawing.Color.White
+        Me.L20.Location = New System.Drawing.Point(979, 110)
+        Me.L20.Name = "L20"
+        Me.L20.Size = New System.Drawing.Size(74, 28)
+        Me.L20.TabIndex = 103
+        Me.L20.Text = "Matlab"
+        '
+        'B20
+        '
+        Me.B20.Image = CType(resources.GetObject("B20.Image"), System.Drawing.Image)
+        Me.B20.Location = New System.Drawing.Point(907, 110)
+        Me.B20.Name = "B20"
+        Me.B20.Size = New System.Drawing.Size(66, 58)
+        Me.B20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B20.TabIndex = 102
+        Me.B20.TabStop = False
+        '
+        'L19
+        '
+        Me.L19.AutoEllipsis = True
+        Me.L19.AutoSize = True
+        Me.L19.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L19.ForeColor = System.Drawing.Color.White
+        Me.L19.Location = New System.Drawing.Point(979, 21)
+        Me.L19.Name = "L19"
+        Me.L19.Size = New System.Drawing.Size(95, 28)
+        Me.L19.TabIndex = 101
+        Me.L19.Text = "AutoCAD"
+        '
+        'B19
+        '
+        Me.B19.Image = CType(resources.GetObject("B19.Image"), System.Drawing.Image)
+        Me.B19.Location = New System.Drawing.Point(907, 21)
+        Me.B19.Name = "B19"
+        Me.B19.Size = New System.Drawing.Size(66, 58)
+        Me.B19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B19.TabIndex = 100
+        Me.B19.TabStop = False
+        '
+        'L17
+        '
+        Me.L17.AutoEllipsis = True
+        Me.L17.AutoSize = True
+        Me.L17.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L17.ForeColor = System.Drawing.Color.White
+        Me.L17.Location = New System.Drawing.Point(681, 377)
+        Me.L17.Name = "L17"
+        Me.L17.Size = New System.Drawing.Size(106, 28)
+        Me.L17.TabIndex = 99
+        Me.L17.Text = "VirtualBox"
+        '
+        'B17
+        '
+        Me.B17.Image = CType(resources.GetObject("B17.Image"), System.Drawing.Image)
+        Me.B17.Location = New System.Drawing.Point(609, 377)
+        Me.B17.Name = "B17"
+        Me.B17.Size = New System.Drawing.Size(66, 58)
+        Me.B17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B17.TabIndex = 98
+        Me.B17.TabStop = False
+        '
+        'L16
+        '
+        Me.L16.AutoEllipsis = True
+        Me.L16.AutoSize = True
+        Me.L16.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L16.ForeColor = System.Drawing.Color.White
+        Me.L16.Location = New System.Drawing.Point(681, 288)
+        Me.L16.Name = "L16"
+        Me.L16.Size = New System.Drawing.Size(147, 28)
+        Me.L16.TabIndex = 97
+        Me.L16.Text = "Mozilla FireFox"
+        '
+        'B16
+        '
+        Me.B16.Image = CType(resources.GetObject("B16.Image"), System.Drawing.Image)
+        Me.B16.Location = New System.Drawing.Point(609, 288)
+        Me.B16.Name = "B16"
+        Me.B16.Size = New System.Drawing.Size(66, 58)
+        Me.B16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B16.TabIndex = 96
+        Me.B16.TabStop = False
+        '
+        'L15
+        '
+        Me.L15.AutoEllipsis = True
+        Me.L15.AutoSize = True
+        Me.L15.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L15.ForeColor = System.Drawing.Color.White
+        Me.L15.Location = New System.Drawing.Point(681, 199)
+        Me.L15.Name = "L15"
+        Me.L15.Size = New System.Drawing.Size(81, 28)
+        Me.L15.TabIndex = 95
+        Me.L15.Text = "McAfee"
+        '
+        'B15
+        '
+        Me.B15.Image = CType(resources.GetObject("B15.Image"), System.Drawing.Image)
+        Me.B15.Location = New System.Drawing.Point(609, 199)
+        Me.B15.Name = "B15"
+        Me.B15.Size = New System.Drawing.Size(66, 58)
+        Me.B15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B15.TabIndex = 94
+        Me.B15.TabStop = False
+        '
+        'L14
+        '
+        Me.L14.AutoEllipsis = True
+        Me.L14.AutoSize = True
+        Me.L14.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L14.ForeColor = System.Drawing.Color.White
+        Me.L14.Location = New System.Drawing.Point(681, 110)
+        Me.L14.Name = "L14"
+        Me.L14.Size = New System.Drawing.Size(67, 28)
+        Me.L14.TabIndex = 93
+        Me.L14.Text = "Opera"
+        '
+        'B14
+        '
+        Me.B14.Image = CType(resources.GetObject("B14.Image"), System.Drawing.Image)
+        Me.B14.Location = New System.Drawing.Point(609, 110)
+        Me.B14.Name = "B14"
+        Me.B14.Size = New System.Drawing.Size(66, 58)
+        Me.B14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B14.TabIndex = 92
+        Me.B14.TabStop = False
+        '
+        'L13
+        '
+        Me.L13.AutoEllipsis = True
+        Me.L13.AutoSize = True
+        Me.L13.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L13.ForeColor = System.Drawing.Color.White
+        Me.L13.Location = New System.Drawing.Point(681, 21)
+        Me.L13.Name = "L13"
+        Me.L13.Size = New System.Drawing.Size(60, 28)
+        Me.L13.TabIndex = 91
+        Me.L13.Text = "Unity"
+        '
+        'B13
+        '
+        Me.B13.Image = CType(resources.GetObject("B13.Image"), System.Drawing.Image)
+        Me.B13.Location = New System.Drawing.Point(609, 21)
+        Me.B13.Name = "B13"
+        Me.B13.Size = New System.Drawing.Size(66, 58)
+        Me.B13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B13.TabIndex = 90
+        Me.B13.TabStop = False
+        '
+        'L11
+        '
+        Me.L11.AutoEllipsis = True
+        Me.L11.AutoSize = True
+        Me.L11.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L11.ForeColor = System.Drawing.Color.White
+        Me.L11.Location = New System.Drawing.Point(392, 377)
+        Me.L11.Name = "L11"
+        Me.L11.Size = New System.Drawing.Size(165, 28)
+        Me.L11.TabIndex = 89
+        Me.L11.Text = "Affinity Designer"
+        '
+        'B11
+        '
+        Me.B11.Image = CType(resources.GetObject("B11.Image"), System.Drawing.Image)
+        Me.B11.Location = New System.Drawing.Point(320, 377)
+        Me.B11.Name = "B11"
+        Me.B11.Size = New System.Drawing.Size(66, 58)
+        Me.B11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B11.TabIndex = 88
+        Me.B11.TabStop = False
+        '
+        'L10
+        '
+        Me.L10.AutoEllipsis = True
+        Me.L10.AutoSize = True
+        Me.L10.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L10.ForeColor = System.Drawing.Color.White
+        Me.L10.Location = New System.Drawing.Point(392, 288)
+        Me.L10.Name = "L10"
+        Me.L10.Size = New System.Drawing.Size(168, 28)
+        Me.L10.TabIndex = 87
+        Me.L10.Text = "Movie Maker Pro"
+        '
+        'B10
+        '
+        Me.B10.Image = CType(resources.GetObject("B10.Image"), System.Drawing.Image)
+        Me.B10.Location = New System.Drawing.Point(320, 288)
+        Me.B10.Name = "B10"
+        Me.B10.Size = New System.Drawing.Size(66, 58)
+        Me.B10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B10.TabIndex = 86
+        Me.B10.TabStop = False
+        '
+        'L9
+        '
+        Me.L9.AutoEllipsis = True
+        Me.L9.AutoSize = True
+        Me.L9.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L9.ForeColor = System.Drawing.Color.White
+        Me.L9.Location = New System.Drawing.Point(392, 199)
+        Me.L9.Name = "L9"
+        Me.L9.Size = New System.Drawing.Size(78, 28)
+        Me.L9.TabIndex = 85
+        Me.L9.Text = "Norton"
+        '
+        'B9
+        '
+        Me.B9.Image = CType(resources.GetObject("B9.Image"), System.Drawing.Image)
+        Me.B9.Location = New System.Drawing.Point(320, 199)
+        Me.B9.Name = "B9"
+        Me.B9.Size = New System.Drawing.Size(66, 58)
+        Me.B9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B9.TabIndex = 84
+        Me.B9.TabStop = False
+        '
+        'L8
+        '
+        Me.L8.AutoEllipsis = True
+        Me.L8.AutoSize = True
+        Me.L8.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L8.ForeColor = System.Drawing.Color.White
+        Me.L8.Location = New System.Drawing.Point(392, 110)
+        Me.L8.Name = "L8"
+        Me.L8.Size = New System.Drawing.Size(178, 28)
+        Me.L8.TabIndex = 83
+        Me.L8.Text = "Adobe Photoshop"
+        '
+        'B8
+        '
+        Me.B8.Image = CType(resources.GetObject("B8.Image"), System.Drawing.Image)
+        Me.B8.Location = New System.Drawing.Point(320, 110)
+        Me.B8.Name = "B8"
+        Me.B8.Size = New System.Drawing.Size(66, 58)
+        Me.B8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B8.TabIndex = 82
+        Me.B8.TabStop = False
+        '
+        'L7
+        '
+        Me.L7.AutoEllipsis = True
+        Me.L7.AutoSize = True
+        Me.L7.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L7.ForeColor = System.Drawing.Color.White
+        Me.L7.Location = New System.Drawing.Point(392, 21)
+        Me.L7.Name = "L7"
+        Me.L7.Size = New System.Drawing.Size(82, 28)
+        Me.L7.TabIndex = 81
+        Me.L7.Text = "Blender"
+        '
+        'B7
+        '
+        Me.B7.Image = CType(resources.GetObject("B7.Image"), System.Drawing.Image)
+        Me.B7.Location = New System.Drawing.Point(320, 21)
+        Me.B7.Name = "B7"
+        Me.B7.Size = New System.Drawing.Size(66, 58)
+        Me.B7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B7.TabIndex = 80
+        Me.B7.TabStop = False
+        '
+        'L5
+        '
+        Me.L5.AutoEllipsis = True
+        Me.L5.AutoSize = True
+        Me.L5.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L5.ForeColor = System.Drawing.Color.White
+        Me.L5.Location = New System.Drawing.Point(97, 377)
+        Me.L5.Name = "L5"
+        Me.L5.Size = New System.Drawing.Size(106, 28)
+        Me.L5.TabIndex = 79
+        Me.L5.Text = "WhatsApp"
+        '
+        'B5
+        '
+        Me.B5.Image = CType(resources.GetObject("B5.Image"), System.Drawing.Image)
+        Me.B5.Location = New System.Drawing.Point(25, 377)
+        Me.B5.Name = "B5"
+        Me.B5.Size = New System.Drawing.Size(66, 58)
+        Me.B5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B5.TabIndex = 78
+        Me.B5.TabStop = False
+        '
+        'L4
+        '
+        Me.L4.AutoEllipsis = True
+        Me.L4.AutoSize = True
+        Me.L4.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L4.ForeColor = System.Drawing.Color.White
+        Me.L4.Location = New System.Drawing.Point(97, 288)
+        Me.L4.Name = "L4"
+        Me.L4.Size = New System.Drawing.Size(169, 28)
+        Me.L4.TabIndex = 77
+        Me.L4.Text = "VLC Media Player"
+        '
+        'B4
+        '
+        Me.B4.Image = CType(resources.GetObject("B4.Image"), System.Drawing.Image)
+        Me.B4.Location = New System.Drawing.Point(25, 288)
+        Me.B4.Name = "B4"
+        Me.B4.Size = New System.Drawing.Size(66, 58)
+        Me.B4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B4.TabIndex = 76
+        Me.B4.TabStop = False
+        '
+        'L3
+        '
+        Me.L3.AutoEllipsis = True
+        Me.L3.AutoSize = True
+        Me.L3.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L3.ForeColor = System.Drawing.Color.White
+        Me.L3.Location = New System.Drawing.Point(97, 199)
+        Me.L3.Name = "L3"
+        Me.L3.Size = New System.Drawing.Size(76, 28)
+        Me.L3.TabIndex = 75
+        Me.L3.Text = "Spotify"
+        '
+        'B3
+        '
+        Me.B3.Image = CType(resources.GetObject("B3.Image"), System.Drawing.Image)
+        Me.B3.Location = New System.Drawing.Point(25, 199)
+        Me.B3.Name = "B3"
+        Me.B3.Size = New System.Drawing.Size(66, 58)
+        Me.B3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B3.TabIndex = 74
+        Me.B3.TabStop = False
+        '
+        'L2
+        '
+        Me.L2.AutoEllipsis = True
+        Me.L2.AutoSize = True
+        Me.L2.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L2.ForeColor = System.Drawing.Color.White
+        Me.L2.Location = New System.Drawing.Point(97, 110)
+        Me.L2.Name = "L2"
+        Me.L2.Size = New System.Drawing.Size(180, 28)
+        Me.L2.TabIndex = 73
+        Me.L2.Text = "Visual Studio 2022"
+        '
+        'B2
+        '
+        Me.B2.Image = CType(resources.GetObject("B2.Image"), System.Drawing.Image)
+        Me.B2.Location = New System.Drawing.Point(25, 110)
+        Me.B2.Name = "B2"
+        Me.B2.Size = New System.Drawing.Size(66, 58)
+        Me.B2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B2.TabIndex = 72
+        Me.B2.TabStop = False
+        '
+        'L1
+        '
+        Me.L1.AutoEllipsis = True
+        Me.L1.AutoSize = True
+        Me.L1.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.L1.ForeColor = System.Drawing.Color.White
+        Me.L1.Location = New System.Drawing.Point(97, 21)
+        Me.L1.Name = "L1"
+        Me.L1.Size = New System.Drawing.Size(218, 28)
+        Me.L1.TabIndex = 50
+        Me.L1.Text = "MS Office Professional"
+        '
+        'B1
+        '
+        Me.B1.Image = CType(resources.GetObject("B1.Image"), System.Drawing.Image)
+        Me.B1.Location = New System.Drawing.Point(25, 21)
+        Me.B1.Name = "B1"
+        Me.B1.Size = New System.Drawing.Size(66, 58)
+        Me.B1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.B1.TabIndex = 24
+        Me.B1.TabStop = False
+        '
+        'cartpic
+        '
+        Me.cartpic.Image = CType(resources.GetObject("cartpic.Image"), System.Drawing.Image)
+        Me.cartpic.Location = New System.Drawing.Point(24, 66)
+        Me.cartpic.Name = "cartpic"
+        Me.cartpic.Size = New System.Drawing.Size(51, 62)
+        Me.cartpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.cartpic.TabIndex = 24
+        Me.cartpic.TabStop = False
+        '
+        'cart_bt
+        '
+        Me.cart_bt.BackColor = System.Drawing.Color.Transparent
+        Me.cart_bt.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cart_bt.Font = New System.Drawing.Font("Segoe UI Variable Display Semib", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.cart_bt.Location = New System.Drawing.Point(21, 59)
+        Me.cart_bt.Name = "cart_bt"
+        Me.cart_bt.Size = New System.Drawing.Size(135, 73)
+        Me.cart_bt.TabIndex = 25
+        Me.cart_bt.Text = "Cart"
+        Me.cart_bt.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.cart_bt.UseVisualStyleBackColor = False
+        '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1110, 700)
+        Me.ClientSize = New System.Drawing.Size(1245, 700)
+        Me.Controls.Add(Me.cartpic)
         Me.Controls.Add(Me.fexit_bt)
         Me.Controls.Add(Me.mini_bt)
         Me.Controls.Add(Me.close_bt)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.ItemCat)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.cart_bt)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form4"
         Me.Text = "Form4"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.fexit_bt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.mini_bt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.close_bt, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ItemCat.ResumeLayout(False)
+        Me.ItemCat.PerformLayout()
+        CType(Me.B24, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B23, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B22, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B21, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B20, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B19, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.B1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cartpic, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox9 As PictureBox
-    Friend WithEvents PictureBox8 As PictureBox
-    Friend WithEvents PictureBox7 As PictureBox
-    Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Label14 As Label
     Friend WithEvents fexit_bt As PictureBox
     Friend WithEvents mini_bt As PictureBox
     Friend WithEvents close_bt As PictureBox
+    Friend WithEvents ItemCat As Panel
+    Friend WithEvents B1 As PictureBox
+    Friend WithEvents L1 As Label
+    Friend WithEvents L11 As Label
+    Friend WithEvents B11 As PictureBox
+    Friend WithEvents L10 As Label
+    Friend WithEvents B10 As PictureBox
+    Friend WithEvents L9 As Label
+    Friend WithEvents B9 As PictureBox
+    Friend WithEvents L8 As Label
+    Friend WithEvents B8 As PictureBox
+    Friend WithEvents L7 As Label
+    Friend WithEvents B7 As PictureBox
+    Friend WithEvents L5 As Label
+    Friend WithEvents B5 As PictureBox
+    Friend WithEvents L4 As Label
+    Friend WithEvents B4 As PictureBox
+    Friend WithEvents L3 As Label
+    Friend WithEvents B3 As PictureBox
+    Friend WithEvents L2 As Label
+    Friend WithEvents B2 As PictureBox
+    Friend WithEvents L24 As Label
+    Friend WithEvents B24 As PictureBox
+    Friend WithEvents L18 As Label
+    Friend WithEvents B18 As PictureBox
+    Friend WithEvents L12 As Label
+    Friend WithEvents B12 As PictureBox
+    Friend WithEvents L6 As Label
+    Friend WithEvents B6 As PictureBox
+    Friend WithEvents L23 As Label
+    Friend WithEvents B23 As PictureBox
+    Friend WithEvents L22 As Label
+    Friend WithEvents B22 As PictureBox
+    Friend WithEvents L21 As Label
+    Friend WithEvents B21 As PictureBox
+    Friend WithEvents L20 As Label
+    Friend WithEvents B20 As PictureBox
+    Friend WithEvents L19 As Label
+    Friend WithEvents B19 As PictureBox
+    Friend WithEvents L17 As Label
+    Friend WithEvents B17 As PictureBox
+    Friend WithEvents L16 As Label
+    Friend WithEvents B16 As PictureBox
+    Friend WithEvents L15 As Label
+    Friend WithEvents B15 As PictureBox
+    Friend WithEvents L14 As Label
+    Friend WithEvents B14 As PictureBox
+    Friend WithEvents L13 As Label
+    Friend WithEvents B13 As PictureBox
+    Friend WithEvents cartpic As PictureBox
+    Friend WithEvents cart_bt As Button
 End Class

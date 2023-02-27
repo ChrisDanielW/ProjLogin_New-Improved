@@ -23,54 +23,56 @@ Partial Class Form5
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form5))
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.mini_bt = New System.Windows.Forms.PictureBox()
+        Me.close_bt = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.price_lbl = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Display_name = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.storage_txt = New System.Windows.Forms.TextBox()
+        Me.gpu_lbl = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gpu_txt = New System.Windows.Forms.TextBox()
+        Me.cpu_txt = New System.Windows.Forms.TextBox()
+        Me.ram_txt = New System.Windows.Forms.TextBox()
+        Me.os_txt = New System.Windows.Forms.TextBox()
+        Me.fexit_bt = New System.Windows.Forms.PictureBox()
+        Me.rate_lbl = New System.Windows.Forms.Label()
+        CType(Me.mini_bt, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.close_bt, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.fexit_bt, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'PictureBox4
+        'mini_bt
         '
-        Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(1023, 12)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(35, 30)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 13
-        Me.PictureBox4.TabStop = False
+        Me.mini_bt.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.mini_bt.Image = CType(resources.GetObject("mini_bt.Image"), System.Drawing.Image)
+        Me.mini_bt.Location = New System.Drawing.Point(874, 12)
+        Me.mini_bt.Name = "mini_bt"
+        Me.mini_bt.Size = New System.Drawing.Size(35, 30)
+        Me.mini_bt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.mini_bt.TabIndex = 13
+        Me.mini_bt.TabStop = False
         '
-        'PictureBox3
+        'close_bt
         '
-        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(1064, 12)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(34, 30)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 12
-        Me.PictureBox3.TabStop = False
+        Me.close_bt.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.close_bt.Image = CType(resources.GetObject("close_bt.Image"), System.Drawing.Image)
+        Me.close_bt.Location = New System.Drawing.Point(915, 12)
+        Me.close_bt.Name = "close_bt"
+        Me.close_bt.Size = New System.Drawing.Size(34, 30)
+        Me.close_bt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.close_bt.TabIndex = 12
+        Me.close_bt.TabStop = False
         '
         'Label1
         '
@@ -79,7 +81,7 @@ Partial Class Form5
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Variable Display Semib", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label1.Location = New System.Drawing.Point(427, 12)
+        Me.Label1.Location = New System.Drawing.Point(25, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(273, 53)
         Me.Label1.TabIndex = 14
@@ -89,14 +91,54 @@ Partial Class Form5
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Indigo
+        Me.Panel1.Controls.Add(Me.rate_lbl)
+        Me.Panel1.Controls.Add(Me.price_lbl)
+        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.Display_name)
         Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.Label14)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.GroupBox1)
-        Me.Panel1.Location = New System.Drawing.Point(23, 68)
+        Me.Panel1.Location = New System.Drawing.Point(23, 77)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1064, 550)
+        Me.Panel1.Size = New System.Drawing.Size(910, 385)
         Me.Panel1.TabIndex = 15
+        '
+        'price_lbl
+        '
+        Me.price_lbl.AutoSize = True
+        Me.price_lbl.Font = New System.Drawing.Font("Segoe UI Semibold", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.price_lbl.ForeColor = System.Drawing.Color.White
+        Me.price_lbl.Location = New System.Drawing.Point(740, 134)
+        Me.price_lbl.Name = "price_lbl"
+        Me.price_lbl.Size = New System.Drawing.Size(145, 32)
+        Me.price_lbl.TabIndex = 18
+        Me.price_lbl.Text = "PlaceHolder"
+        Me.price_lbl.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label7
+        '
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI Variable Display Semib", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(792, 94)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(93, 40)
+        Me.Label7.TabIndex = 25
+        Me.Label7.Text = "Price:"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Display_name
+        '
+        Me.Display_name.AutoSize = True
+        Me.Display_name.Font = New System.Drawing.Font("Segoe UI Variable Display Semib", 13.9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Display_name.ForeColor = System.Drawing.Color.White
+        Me.Display_name.Location = New System.Drawing.Point(45, 26)
+        Me.Display_name.Name = "Display_name"
+        Me.Display_name.Size = New System.Drawing.Size(83, 32)
+        Me.Display_name.TabIndex = 24
+        Me.Display_name.Text = "Label7"
         '
         'Button3
         '
@@ -104,22 +146,12 @@ Partial Class Form5
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Location = New System.Drawing.Point(930, 495)
+        Me.Button3.Location = New System.Drawing.Point(798, 334)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(90, 29)
         Me.Button3.TabIndex = 23
         Me.Button3.Text = "Next"
         Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.ForeColor = System.Drawing.Color.White
-        Me.Label14.Location = New System.Drawing.Point(916, 277)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(52, 20)
-        Me.Label14.TabIndex = 22
-        Me.Label14.Text = "Rating"
         '
         'Label2
         '
@@ -128,53 +160,53 @@ Partial Class Form5
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Variable Display Semib", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(726, 257)
+        Me.Label2.Location = New System.Drawing.Point(705, 197)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(173, 40)
+        Me.Label2.Size = New System.Drawing.Size(180, 40)
         Me.Label2.TabIndex = 16
-        Me.Label2.Text = "Item Rating"
+        Me.Label2.Text = "Item Rating:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.TextBox8)
-        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.storage_txt)
+        Me.GroupBox1.Controls.Add(Me.gpu_lbl)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.TextBox6)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.gpu_txt)
+        Me.GroupBox1.Controls.Add(Me.cpu_txt)
+        Me.GroupBox1.Controls.Add(Me.ram_txt)
+        Me.GroupBox1.Controls.Add(Me.os_txt)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
-        Me.GroupBox1.Location = New System.Drawing.Point(47, 145)
+        Me.GroupBox1.Location = New System.Drawing.Point(45, 69)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(597, 270)
         Me.GroupBox1.TabIndex = 18
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Specifications"
+        Me.GroupBox1.Text = "Requirements"
         '
-        'TextBox8
+        'storage_txt
         '
-        Me.TextBox8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox8.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox8.Location = New System.Drawing.Point(236, 128)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.ReadOnly = True
-        Me.TextBox8.Size = New System.Drawing.Size(313, 20)
-        Me.TextBox8.TabIndex = 17
+        Me.storage_txt.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.storage_txt.ForeColor = System.Drawing.Color.White
+        Me.storage_txt.Location = New System.Drawing.Point(236, 128)
+        Me.storage_txt.Name = "storage_txt"
+        Me.storage_txt.ReadOnly = True
+        Me.storage_txt.Size = New System.Drawing.Size(313, 27)
+        Me.storage_txt.TabIndex = 17
         '
-        'Label7
+        'gpu_lbl
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(31, 207)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(199, 23)
-        Me.Label7.TabIndex = 12
-        Me.Label7.Text = "Graphics Processing Unit"
+        Me.gpu_lbl.AutoSize = True
+        Me.gpu_lbl.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.gpu_lbl.ForeColor = System.Drawing.Color.White
+        Me.gpu_lbl.Location = New System.Drawing.Point(31, 207)
+        Me.gpu_lbl.Name = "gpu_lbl"
+        Me.gpu_lbl.Size = New System.Drawing.Size(199, 23)
+        Me.gpu_lbl.TabIndex = 12
+        Me.gpu_lbl.Text = "Graphics Processing Unit"
         '
         'Label6
         '
@@ -220,111 +252,113 @@ Partial Class Form5
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Operating System"
         '
-        'TextBox6
+        'gpu_txt
         '
-        Me.TextBox6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox6.Location = New System.Drawing.Point(236, 210)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(313, 20)
-        Me.TextBox6.TabIndex = 5
+        Me.gpu_txt.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.gpu_txt.ForeColor = System.Drawing.Color.White
+        Me.gpu_txt.Location = New System.Drawing.Point(236, 210)
+        Me.gpu_txt.Name = "gpu_txt"
+        Me.gpu_txt.ReadOnly = True
+        Me.gpu_txt.Size = New System.Drawing.Size(313, 27)
+        Me.gpu_txt.TabIndex = 5
         '
-        'TextBox5
+        'cpu_txt
         '
-        Me.TextBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox5.Location = New System.Drawing.Point(236, 168)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.ReadOnly = True
-        Me.TextBox5.Size = New System.Drawing.Size(313, 20)
-        Me.TextBox5.TabIndex = 4
+        Me.cpu_txt.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.cpu_txt.ForeColor = System.Drawing.Color.White
+        Me.cpu_txt.Location = New System.Drawing.Point(236, 168)
+        Me.cpu_txt.Name = "cpu_txt"
+        Me.cpu_txt.ReadOnly = True
+        Me.cpu_txt.Size = New System.Drawing.Size(313, 27)
+        Me.cpu_txt.TabIndex = 4
         '
-        'TextBox2
+        'ram_txt
         '
-        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Location = New System.Drawing.Point(236, 88)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(313, 20)
-        Me.TextBox2.TabIndex = 1
+        Me.ram_txt.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ram_txt.ForeColor = System.Drawing.Color.White
+        Me.ram_txt.Location = New System.Drawing.Point(236, 88)
+        Me.ram_txt.Name = "ram_txt"
+        Me.ram_txt.ReadOnly = True
+        Me.ram_txt.Size = New System.Drawing.Size(313, 27)
+        Me.ram_txt.TabIndex = 1
         '
-        'TextBox1
+        'os_txt
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Location = New System.Drawing.Point(236, 46)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(313, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.os_txt.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.os_txt.ForeColor = System.Drawing.Color.White
+        Me.os_txt.Location = New System.Drawing.Point(236, 46)
+        Me.os_txt.Name = "os_txt"
+        Me.os_txt.ReadOnly = True
+        Me.os_txt.Size = New System.Drawing.Size(313, 27)
+        Me.os_txt.TabIndex = 0
         '
-        'Label8
+        'fexit_bt
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(23, 22)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(170, 20)
-        Me.Label8.TabIndex = 24
-        Me.Label8.Text = "FORM MAY BE SMALLER"
+        Me.fexit_bt.Image = CType(resources.GetObject("fexit_bt.Image"), System.Drawing.Image)
+        Me.fexit_bt.Location = New System.Drawing.Point(833, 12)
+        Me.fexit_bt.Name = "fexit_bt"
+        Me.fexit_bt.Size = New System.Drawing.Size(35, 30)
+        Me.fexit_bt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.fexit_bt.TabIndex = 25
+        Me.fexit_bt.TabStop = False
         '
-        'PictureBox7
+        'rate_lbl
         '
-        Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
-        Me.PictureBox7.Location = New System.Drawing.Point(982, 12)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(35, 30)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox7.TabIndex = 25
-        Me.PictureBox7.TabStop = False
+        Me.rate_lbl.AutoSize = True
+        Me.rate_lbl.Font = New System.Drawing.Font("Segoe UI Semibold", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.rate_lbl.ForeColor = System.Drawing.Color.White
+        Me.rate_lbl.Location = New System.Drawing.Point(740, 236)
+        Me.rate_lbl.Name = "rate_lbl"
+        Me.rate_lbl.Size = New System.Drawing.Size(145, 32)
+        Me.rate_lbl.TabIndex = 26
+        Me.rate_lbl.Text = "PlaceHolder"
         '
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1110, 700)
-        Me.Controls.Add(Me.PictureBox7)
-        Me.Controls.Add(Me.Label8)
+        Me.ClientSize = New System.Drawing.Size(961, 492)
+        Me.Controls.Add(Me.fexit_bt)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PictureBox4)
-        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.mini_bt)
+        Me.Controls.Add(Me.close_bt)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form5"
         Me.Text = "Form5"
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.mini_bt, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.close_bt, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.fexit_bt, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents mini_bt As PictureBox
+    Friend WithEvents close_bt As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents Label7 As Label
+    Friend WithEvents storage_txt As TextBox
+    Friend WithEvents gpu_lbl As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents gpu_txt As TextBox
+    Friend WithEvents cpu_txt As TextBox
+    Friend WithEvents ram_txt As TextBox
+    Friend WithEvents os_txt As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label14 As Label
     Friend WithEvents Button3 As Button
-    Friend WithEvents Label8 As Label
-    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents fexit_bt As PictureBox
+    Friend WithEvents Display_name As Label
+    Friend WithEvents price_lbl As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents rate_lbl As Label
 End Class

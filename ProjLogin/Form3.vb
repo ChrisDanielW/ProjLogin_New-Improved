@@ -58,6 +58,8 @@ Public Class Form3
     Private Sub cpumfct_txt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cpumfct_txt.SelectedIndexChanged
         HasIntel = False
         HasAMD = False
+        cpugen_lbl.Visible = True
+        cpugen_txt.Visible = True
         cpugen_txt.Items.Clear()
         If cpumfct_txt.Text = "Intel i3" Or cpumfct_txt.Text = "Intel i5" Or cpumfct_txt.Text = "Intel i7" Then
             HasIntel = True
@@ -86,6 +88,8 @@ Public Class Form3
         End If
         If HasIntel = False And HasAMD = False Then
             cpugen_txt.Text = "-1"
+            cpugen_lbl.Visible = False
+            cpugen_txt.Visible = False
         End If
     End Sub
 
@@ -191,8 +195,9 @@ Public Class Form3
         remStore = 0
     End Sub
 
+    Dim CanEdit As Boolean = True
+
     Private Sub cont_bt_Click(sender As Object, e As EventArgs) Handles cont_bt.Click
-        Dim CanEdit As Boolean = True
         If os_txt.Text = "" Or
            ram_box.Text = "" Or
            cpumfct_txt.Text = "" Or
@@ -207,35 +212,24 @@ Public Class Form3
         ElseIf SysRate = -1 Or SysRate = 0 Then
             MessageBox.Show("Please calculate your system's rating")
         Else
-            remStore = Convert.ToInt32(storage_tot_txt.Text) - Convert.ToInt32(storage_use_txt.Text)
-            Dim connString As String = "datasource=localhost; uid=root; pwd=Chs55432; database=plitdb"
-            Dim con As New MySqlConnection(connString)
-            con.Open()
-            Dim cmd As New MySqlCommand("SELECT * from systemspec where us_id = @r1", con)
-            cmd.Parameters.AddWithValue("@r1", us_id)
-            Dim dr As MySqlDataReader = cmd.ExecuteReader
-            If dr.HasRows Then
-                If MsgBox("A system already seems to be registered under your user ID, would you like to edit it?", vbQuestion Or vbYesNo Or vbDefaultButton2, "Full Exit") = vbNo Then
-                    CanEdit = False
-                    skip_bt.Visible = True
-                    dr.Close()
-                Else
-                    dr.Close()
-                    cmd.CommandText = "DELETE from systemspec where us_id = @r1"
-                    cmd.ExecuteNonQuery()
-                End If
-            End If
-            con.Close()
-            cmd.Parameters.Clear()
             If CanEdit = True Then
+                remStore = Convert.ToInt32(storage_tot_txt.Text) - Convert.ToInt32(storage_use_txt.Text)
+                Dim connString As String = "datasource=localhost; uid=root; pwd=Chs55432; database=plitdb"
+                Dim con As New MySqlConnection(connString)
+                Dim cmd As New MySqlCommand
                 cmd.CommandText = "INSERT into systemspec (us_id, s_os, s_storage, use_storage, rem_storage, s_ram, s_gpu, s_rate, s_cpugen, s_cpumfct) values (@v1, @v2, @v3, @v4, @v5, @v6, @v7, @v8, @v9, @v10)"
+                cmd.Connection = con
                 cmd.Parameters.AddWithValue("@v1", us_id)
                 cmd.Parameters.AddWithValue("@v2", os_txt.Text)
                 cmd.Parameters.AddWithValue("@v3", Convert.ToInt32(storage_tot_txt.Text))
                 cmd.Parameters.AddWithValue("@v4", Convert.ToInt32(storage_use_txt.Text))
                 cmd.Parameters.AddWithValue("@v5", remStore)
                 cmd.Parameters.AddWithValue("@v6", Convert.ToInt32(ram_box.Text))
-                cmd.Parameters.AddWithValue("@v7", gpu_ded.Text)
+                If HasGPU = True Then
+                    cmd.Parameters.AddWithValue("@v7", gpu_ded.Text)
+                Else
+                    cmd.Parameters.AddWithValue("@v7", "NA")
+                End If
                 cmd.Parameters.AddWithValue("@v8", SysRate)
                 cmd.Parameters.AddWithValue("@v9", cpugen_txt.Text)
                 cmd.Parameters.AddWithValue("@v10", cpumfct_txt.Text)
@@ -243,18 +237,60 @@ Public Class Form3
                 cmd.ExecuteNonQuery()
                 con.Close()
                 cmd.Parameters.Clear()
+                Form4.Show()
+                Me.Close()
             Else
-                MessageBox.Show("System registration cancelled")
+                    MessageBox.Show("System registration cancelled")
             End If
         End If
     End Sub
 
     Dim us_id As String
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cont_bt.Text = "Continue"
         us_id = Form8.UserID
         skip_bt.Visible = False
         cont_bt.Visible = False
         gpu_ded.Visible = False
         gpu_ded_lbl.Visible = False
+        Dim connString As String = "datasource=localhost; uid=root; pwd=Chs55432; database=plitdb"
+        Dim con As New MySqlConnection(connString)
+        con.Open()
+        Dim cmd As New MySqlCommand("SELECT * from systemspec where us_id = @r1", con)
+        cmd.Parameters.AddWithValue("@r1", us_id)
+        Dim dr As MySqlDataReader = cmd.ExecuteReader
+        If dr.Read Then
+            If MsgBox("A system already seems to be registered under your user ID, would you like to edit it?", vbQuestion Or vbYesNo Or vbDefaultButton2, "Existing System") = vbNo Then
+                CanEdit = False
+                skip_bt.Visible = True
+                dr.Close()
+            Else
+                cont_bt.Text = "Save"
+                MessageBox.Show("Remember to save after you've made your changes")
+                os_txt.Text = dr.GetString("s_os")
+                ram_box.Text = dr.GetInt32("s_ram")
+                cpumfct_txt.Text = dr.GetString("s_cpumfct")
+                cpugen_txt.Text = dr.GetString("s_cpugen")
+                storage_tot_txt.Text = dr.GetInt32("s_storage")
+                storage_use_txt.Text = dr.GetInt32("use_storage")
+                gpu_int.Text = "re-enter your iGPU here"
+                gpu_ded.Text = dr.GetString("s_gpu")
+                If gpu_ded.Text = "NA" Then
+                    ded_rad.Checked = False
+                Else
+                    ded_rad.Checked = True
+                End If
+                dr.Close()
+                cmd.CommandText = "DELETE from systemspec where us_id = @r1"
+                cmd.ExecuteNonQuery()
+            End If
+        End If
+        con.Close()
+        cmd.Parameters.Clear()
+    End Sub
+
+    Private Sub skip_bt_Click(sender As Object, e As EventArgs) Handles skip_bt.Click
+        Form4.Show()
+        Me.Close()
     End Sub
 End Class

@@ -24,10 +24,6 @@ Public Class Form1
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub CloseForm(sender As Object, e As EventArgs) Handles close_bt.Click
-        Me.Hide()
-    End Sub
-
     '//Full Exit Button Message
     Private Sub ExitForm(sender As Object, e As EventArgs) Handles fexit_bt.Click
         If MsgBox("Are you sure you want to exit? (closes all forms)", vbQuestion Or vbYesNo Or vbDefaultButton2, "Full Exit") = vbYes Then
