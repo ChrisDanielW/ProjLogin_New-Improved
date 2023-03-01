@@ -59,11 +59,11 @@ Partial Class Form7
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Variable Display Semib", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label3.Location = New System.Drawing.Point(364, 12)
+        Me.Label3.Location = New System.Drawing.Point(12, 9)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(391, 53)
+        Me.Label3.Size = New System.Drawing.Size(198, 53)
         Me.Label3.TabIndex = 19
-        Me.Label3.Text = "Compatibility Check"
+        Me.Label3.Text = "Checkout"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Form7

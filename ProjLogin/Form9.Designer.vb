@@ -33,6 +33,7 @@ Partial Class Form9
         Me.fexit_bt = New System.Windows.Forms.PictureBox()
         Me.mini_bt = New System.Windows.Forms.PictureBox()
         Me.close_bt = New System.Windows.Forms.PictureBox()
+        Me.del_bt = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.fexit_bt, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -157,12 +158,27 @@ Partial Class Form9
         Me.close_bt.TabIndex = 30
         Me.close_bt.TabStop = False
         '
+        'del_bt
+        '
+        Me.del_bt.AutoSize = True
+        Me.del_bt.BackColor = System.Drawing.Color.Silver
+        Me.del_bt.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.del_bt.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.del_bt.ForeColor = System.Drawing.Color.Black
+        Me.del_bt.Location = New System.Drawing.Point(12, 329)
+        Me.del_bt.Name = "del_bt"
+        Me.del_bt.Size = New System.Drawing.Size(135, 30)
+        Me.del_bt.TabIndex = 33
+        Me.del_bt.Text = "Delete from cart"
+        Me.del_bt.UseVisualStyleBackColor = False
+        '
         'Form9
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.RoyalBlue
         Me.ClientSize = New System.Drawing.Size(1110, 385)
+        Me.Controls.Add(Me.del_bt)
         Me.Controls.Add(Me.fexit_bt)
         Me.Controls.Add(Me.mini_bt)
         Me.Controls.Add(Me.close_bt)
@@ -193,4 +209,5 @@ Partial Class Form9
     Friend WithEvents fexit_bt As PictureBox
     Friend WithEvents mini_bt As PictureBox
     Friend WithEvents close_bt As PictureBox
+    Friend WithEvents del_bt As Button
 End Class

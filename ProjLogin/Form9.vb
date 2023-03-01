@@ -33,34 +33,16 @@ Public Class Form9
         End If
     End Sub
 
-    'Dim cart() As Integer = AllPub.Cart
-    Dim ShowInfo As Boolean = True
     Private Sub Form9_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If cart.Length > 0 Then
-            Dim connString As String = "datasource=localhost; uid=root; pwd=Chs55432; database=plitdb"
-            Dim con As New MySqlConnection(connString)
-            Dim cmd As New MySqlCommand
-            cmd.Connection = con
-            con.Open()
-            For i2 As Integer = 0 To AllPub.Cart.Length - 1
-                cmd.CommandText = "SELECT * from catalogue where itm_id = @v1"
-                cmd.Parameters.AddWithValue("@v1", AllPub.Cart(i2))
-                Using dr As MySqlDataReader = cmd.ExecuteReader
-                    If dr.Read() Then
-                        itemlist.Items.Add(dr.GetString("itm_name"))
-                    End If
-                End Using
-                cmd.Parameters.Clear()
-            Next
-            con.Close()
-        Else
+        del_bt.Visible = False
+        Fill()
+        If itemlist.Items.Count = 0 Then
             info_txt.Text = "There are no items in your cart"
-            ShowInfo = False
         End If
-
     End Sub
 
     Private Sub itemlist_SelectedIndexChanged(sender As Object, e As EventArgs) Handles itemlist.SelectedIndexChanged
+        del_bt.Visible = True
         Dim item_sel As String = itemlist.SelectedItem.ToString()
         Dim connString As String = "datasource=localhost; uid=root; pwd=Chs55432; database=plitdb"
         Dim con As New MySqlConnection(connString)
@@ -77,4 +59,41 @@ Public Class Form9
         con.Close()
         cmd.Parameters.Clear()
     End Sub
+
+    Private Sub del_bt_Click(sender As Object, e As EventArgs) Handles del_bt.Click
+        If MsgBox("Are you sure you want to delete this item from your cart", vbQuestion Or vbYesNo Or vbDefaultButton2, "Item Deletion") = vbYes Then
+            Dim n As Integer = AllPub.Cart.Length()
+            Dim j As Integer = itemlist.SelectedIndex
+            Array.Copy(AllPub.Cart, j + 1, AllPub.Cart, j, n - j - 1)
+            Array.Resize(AllPub.Cart, AllPub.Cart.Length - 1)
+            del_bt.Visible = False
+            info_txt.Text = ""
+            MessageBox.Show("Item Deleted")
+            itemlist.Items.Clear()
+            Fill()
+            If itemlist.Items.Count = 0 Then
+                info_txt.Text = "There are no items in your cart"
+            End If
+        End If
+    End Sub
+
+    Private Sub Fill()
+        Dim connString As String = "datasource=localhost; uid=root; pwd=Chs55432; database=plitdb"
+        Dim con As New MySqlConnection(connString)
+        Dim cmd As New MySqlCommand
+        cmd.Connection = con
+        con.Open()
+        For i2 As Integer = 0 To AllPub.Cart.Length - 1
+            cmd.CommandText = "SELECT * from catalogue where itm_id = @v1"
+            cmd.Parameters.AddWithValue("@v1", AllPub.Cart(i2))
+            Using dr As MySqlDataReader = cmd.ExecuteReader
+                If dr.Read() Then
+                    itemlist.Items.Add(dr.GetString("itm_name"))
+                End If
+            End Using
+            cmd.Parameters.Clear()
+        Next
+        con.Close()
+    End Sub
+
 End Class
