@@ -27,10 +27,10 @@ Partial Class Form6
         Me.close_bt = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.back_bt = New System.Windows.Forms.Button()
         Me.addcrt_bt = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.itmrat_lbl = New System.Windows.Forms.Label()
+        Me.sysrat_lbl = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -84,10 +84,10 @@ Partial Class Form6
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.BlueViolet
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.back_bt)
         Me.Panel1.Controls.Add(Me.addcrt_bt)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.Label14)
+        Me.Panel1.Controls.Add(Me.itmrat_lbl)
+        Me.Panel1.Controls.Add(Me.sysrat_lbl)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
@@ -97,18 +97,18 @@ Partial Class Form6
         Me.Panel1.Size = New System.Drawing.Size(1064, 550)
         Me.Panel1.TabIndex = 19
         '
-        'Button1
+        'back_bt
         '
-        Me.Button1.BackColor = System.Drawing.Color.Silver
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(899, 503)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(148, 29)
-        Me.Button1.TabIndex = 28
-        Me.Button1.Text = "Back to catalogue"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.back_bt.BackColor = System.Drawing.Color.Silver
+        Me.back_bt.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.back_bt.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.back_bt.ForeColor = System.Drawing.Color.Black
+        Me.back_bt.Location = New System.Drawing.Point(899, 503)
+        Me.back_bt.Name = "back_bt"
+        Me.back_bt.Size = New System.Drawing.Size(148, 29)
+        Me.back_bt.TabIndex = 28
+        Me.back_bt.Text = "Back to catalogue"
+        Me.back_bt.UseVisualStyleBackColor = False
         '
         'addcrt_bt
         '
@@ -123,27 +123,29 @@ Partial Class Form6
         Me.addcrt_bt.Text = "Add to cart and go back to catalogue"
         Me.addcrt_bt.UseVisualStyleBackColor = False
         '
-        'Label5
+        'itmrat_lbl
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(647, 104)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(125, 46)
-        Me.Label5.TabIndex = 24
-        Me.Label5.Text = "Rating"
+        Me.itmrat_lbl.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.itmrat_lbl.Font = New System.Drawing.Font("Segoe UI", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.itmrat_lbl.ForeColor = System.Drawing.Color.Black
+        Me.itmrat_lbl.Location = New System.Drawing.Point(623, 86)
+        Me.itmrat_lbl.Name = "itmrat_lbl"
+        Me.itmrat_lbl.Size = New System.Drawing.Size(183, 67)
+        Me.itmrat_lbl.TabIndex = 24
+        Me.itmrat_lbl.Text = "Rating"
+        Me.itmrat_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'Label14
+        'sysrat_lbl
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label14.ForeColor = System.Drawing.Color.Black
-        Me.Label14.Location = New System.Drawing.Point(298, 104)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(125, 46)
-        Me.Label14.TabIndex = 23
-        Me.Label14.Text = "Rating"
+        Me.sysrat_lbl.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.sysrat_lbl.Font = New System.Drawing.Font("Segoe UI", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.sysrat_lbl.ForeColor = System.Drawing.Color.Black
+        Me.sysrat_lbl.Location = New System.Drawing.Point(276, 86)
+        Me.sysrat_lbl.Name = "sysrat_lbl"
+        Me.sysrat_lbl.Size = New System.Drawing.Size(183, 67)
+        Me.sysrat_lbl.TabIndex = 23
+        Me.sysrat_lbl.Text = "Rating"
+        Me.sysrat_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Label4
         '
@@ -220,6 +222,7 @@ Partial Class Form6
         Me.verd_txt.Location = New System.Drawing.Point(3, 49)
         Me.verd_txt.Multiline = True
         Me.verd_txt.Name = "verd_txt"
+        Me.verd_txt.ReadOnly = True
         Me.verd_txt.Size = New System.Drawing.Size(1010, 188)
         Me.verd_txt.TabIndex = 27
         Me.verd_txt.Text = "PlaceHolder"
@@ -268,9 +271,9 @@ Partial Class Form6
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents itmrat_lbl As Label
+    Friend WithEvents sysrat_lbl As Label
+    Friend WithEvents back_bt As Button
     Friend WithEvents addcrt_bt As Button
     Friend WithEvents fexit_bt As PictureBox
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel

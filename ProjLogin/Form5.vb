@@ -36,7 +36,7 @@ Public Class Form5
 
     Dim itm_id As String
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        itm_id = Form4.ItemID
+        itm_id = ItemID
         Dim connString As String = "datasource=localhost; uid=root; pwd=Chs55432; database=plitdb"
         Dim con As New MySqlConnection(connString)
         con.Open()

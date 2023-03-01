@@ -248,7 +248,7 @@ Public Class Form3
     Dim us_id As String
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cont_bt.Text = "Continue"
-        us_id = Form8.UserID
+        us_id = UserID
         skip_bt.Visible = False
         cont_bt.Visible = False
         gpu_ded.Visible = False
@@ -260,6 +260,7 @@ Public Class Form3
         cmd.Parameters.AddWithValue("@r1", us_id)
         Dim dr As MySqlDataReader = cmd.ExecuteReader
         If dr.Read Then
+
             If MsgBox("A system already seems to be registered under your user ID, would you like to edit it?", vbQuestion Or vbYesNo Or vbDefaultButton2, "Existing System") = vbNo Then
                 CanEdit = False
                 skip_bt.Visible = True

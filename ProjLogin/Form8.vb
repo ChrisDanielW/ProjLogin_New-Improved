@@ -1,6 +1,12 @@
 ﻿Imports System.Runtime.InteropServices
 Imports MySql.Data.MySqlClient
 
+Public Module AllPub
+    Public UserID As String
+    Public ItemID As Integer
+    Public Cart(50) As Integer
+    Public ind As Integer = 0
+End Module
 Public Class Form8
 
     Public Const WM_NCLBUTTONDOWN As Integer = 161
@@ -33,13 +39,13 @@ Public Class Form8
         End If
     End Sub
 
-    Public UserID As String
+    'Public UserID As String
     Private Sub Continues(sender As Object, e As EventArgs) Handles cont_bt.Click
 
         If us_id_txt.Text = "" Or us_pwd_txt.Text = "" Then
             MessageBox.Show("Please fill all your details")
         Else
-            Dim con As New MySqlConnection("datasource=localhost; uid=root; pwd=Chs55432; database=plitdb")
+            Dim con As New MySqlConnection("datasource=localhost; uid=root; pwd=Chs55432; database=plitdb; AllowUserVariables=True")
             con.Open()
             Dim cmd As New MySqlCommand("SELECT * from user_login WHERE us_id = @v1", con)
             cmd.Parameters.AddWithValue("@v1", us_id_txt.Text)
@@ -48,10 +54,10 @@ Public Class Form8
                 If dr.GetString("us_id") = us_id_txt.Text Then
                     If dr.GetString("us_pwd") = us_pwd_txt.Text Then
                         MessageBox.Show("Login Successful")
+                        UserID = dr.GetString("us_id")
                         dr.Close()
                         con.Close()
                         cmd.Parameters.Clear()
-                        UserID = us_id_txt.Text
                         Form3.Show()
                         Me.Close()
                     Else

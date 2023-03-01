@@ -44,15 +44,7 @@ Public Class Form4
         Next
     End Sub
 
-    'Private Sub Catalogue_Clicked(sender As Object, e As EventArgs)
-    '    'For Each i_name As Control In ItemCat.Controls
-    '    '    If TypeOf i_name Is Label Then
-    '    '        AddHandler i_name.Click, AddressOf ItemClicked
-    '    '    End If
-    '    'Next
-    'End Sub
-
-    Public ItemID As Integer
+    'Public ItemID As Integer
     Private Sub ItemClicked(sender As Object, e As EventArgs)
         Dim Selected_Item As Label = CType(sender, Label)
         Dim connString As String = "datasource=localhost; uid=root; pwd=Chs55432; database=plitdb"

@@ -32,6 +32,7 @@ Public Class Form6
         End If
     End Sub
 
+    Dim f8 As New Form8()
     Dim us_id As String
     Dim itm_id As Integer
     Dim s_os As String
@@ -42,15 +43,15 @@ Public Class Form6
     Dim NeedsGPU As Boolean
     Dim i_storage As Integer
     Dim i_os As String
-    Public cart(50) As Integer
-    Dim i As Integer = 0
+    'Public cart(50) As Integer
+    'Dim i As Integer = 0
 
     Private Sub Form6_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         addcrt_bt.Visible = False
 
-        us_id = Form8.UserID
-        itm_id = Form4.ItemID
+        us_id = UserID
+        itm_id = ItemID
         Dim connString As String = "datasource=localhost; uid=root; pwd=Chs55432; database=plitdb"
         Dim con As New MySqlConnection(connString)
         con.Open()
@@ -59,7 +60,7 @@ Public Class Form6
         Dim dr1 As MySqlDataReader = cmd.ExecuteReader
         If dr1.Read Then
             s_rate = dr1.GetInt32("s_rate")
-            If dr1.GetString("s_gpu") = "-1" Then
+            If dr1.GetString("s_gpu") = "NA" Then
                 HasGPU = False
             Else
                 HasGPU = True
@@ -86,22 +87,48 @@ Public Class Form6
         cmd.Parameters.Clear()
         con.Close()
 
-        Dim sver As Integer
-        Dim iver As Integer
-        'sver = Convert.ToInt32(GetChar(s_os, 10))
-        'iver = Convert.ToInt32(GetChar(i_os, 10))
-
-        MessageBox.Show(s_storage)
-        MessageBox.Show(i_storage)
-
-        'If sver < iver And sver <> 1 Then
-        'MessageBox.Show(s_os + " is not supported by this product. Upgrade to a newer version of Windows")
-        'Else
-        If s_storage < i_storage Then
-            verd_txt.Text = "Your system lacks sufficient storage to install and properly run this product."
+        sysrat_lbl.Text = s_rate
+        itmrat_lbl.Text = i_rate
+        Dim sver, iver As Integer
+        If s_os = "Windows 11" Or s_os = "Windows 10" Then
+            sver = 9
         Else
-            If NeedsGPU = True Then
-                If HasGPU = True Then
+            sver = Integer.Parse(s_os.Chars(8))
+        End If
+        If i_os = "Windows 10" Then
+            iver = 9
+        Else
+            iver = Integer.Parse(s_os.Chars(8))
+        End If
+
+        If sver < iver Then
+            verd_txt.Text = s_os.ToString + " is not supported by this product. Upgrade to a newer version of Windows"
+        Else
+            If s_storage < i_storage Then
+                verd_txt.Text = "Your system lacks sufficient storage to install and properly run this product."
+            Else
+                If NeedsGPU = True Then
+                    If HasGPU = True Then
+                        If s_rate < i_rate Then
+                            verd_txt.Text = "Your system is incapable of optimally running this product"
+                        ElseIf s_rate = i_rate Then
+                            verd_txt.Text = "Your system (just) meets the product's requirements"
+                            addcrt_bt.Visible = True
+                        Else
+                            verd_txt.Text = "Your system should be able to run this product"
+                            addcrt_bt.Visible = True
+                        End If
+                    Else
+                        If s_rate < i_rate Then
+                            verd_txt.Text = "Your system is incapable of optimally running this product"
+                        ElseIf s_rate = i_rate Then
+                            verd_txt.Text = "Your system appears to just meet the product's requirements but considering it's specifications and it's lack of a graphics card, it is not recommended to consider running this software on it. Try again after adding a dedicated graphics card to your system"
+                        Else
+                            verd_txt.Text = "Your system should be able to run this product. Consider adding a graphics card to your system to achieve optimal better performance"
+                            addcrt_bt.Visible = True
+                        End If
+                    End If
+                Else
                     If s_rate < i_rate Then
                         verd_txt.Text = "Your system is incapable of optimally running this product"
                     ElseIf s_rate = i_rate Then
@@ -111,25 +138,20 @@ Public Class Form6
                         verd_txt.Text = "Your system should be able to run this product"
                         addcrt_bt.Visible = True
                     End If
-                Else
-                    If s_rate < i_rate Then
-                        verd_txt.Text = "Your system is incapable of optimally running this product"
-                    ElseIf s_rate = i_rate Then
-                        verd_txt.Text = "Your system appears to just meet the product's requirements but considering it's specifications and it's lack of a graphics card, it is not recommended to consider running this software on it. Try again after adding a dedicated graphics card to your system"
-                    Else
-                        verd_txt.Text = "Your system should be able to run this product. Consider adding a graphics card to your system to achieve optimal better performance"
-                        addcrt_bt.Visible = True
-                    End If
                 End If
             End If
         End If
-        'End If
 
     End Sub
 
     Private Sub addcrt_bt_Click(sender As Object, e As EventArgs) Handles addcrt_bt.Click
-        cart(i) = itm_id
-        i += 1
+        AllPub.Cart(AllPub.ind) = itm_id
+        AllPub.ind += 1
+        Form5.Close()
+        Me.Close()
+    End Sub
+
+    Private Sub back_bt_Click(sender As Object, e As EventArgs) Handles back_bt.Click
         Form5.Close()
         Me.Close()
     End Sub
