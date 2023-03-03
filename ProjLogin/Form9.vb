@@ -96,4 +96,8 @@ Public Class Form9
         con.Close()
     End Sub
 
+    Private Sub cont_bt_Click(sender As Object, e As EventArgs) Handles cont_bt.Click
+
+    End Sub
+
 End Class

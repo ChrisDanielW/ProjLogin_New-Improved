@@ -87,6 +87,7 @@ Public Class Form6
         cmd.Parameters.Clear()
         con.Close()
 
+
         sysrat_lbl.Text = s_rate
         itmrat_lbl.Text = i_rate
         Dim sver, iver As Integer

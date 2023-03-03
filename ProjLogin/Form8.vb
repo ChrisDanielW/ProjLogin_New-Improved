@@ -6,6 +6,7 @@ Public Module AllPub
     Public ItemID As Integer
     Public Cart(50) As Integer
     Public ind As Integer = 0
+    Public ccno As String
 End Module
 Public Class Form8
 
@@ -39,7 +40,6 @@ Public Class Form8
         End If
     End Sub
 
-    'Public UserID As String
     Private Sub Continues(sender As Object, e As EventArgs) Handles cont_bt.Click
 
         If us_id_txt.Text = "" Or us_pwd_txt.Text = "" Then

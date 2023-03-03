@@ -121,7 +121,7 @@ Partial Class Form9
         Me.cont_bt.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cont_bt.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.cont_bt.ForeColor = System.Drawing.Color.Black
-        Me.cont_bt.Location = New System.Drawing.Point(935, 344)
+        Me.cont_bt.Location = New System.Drawing.Point(935, 329)
         Me.cont_bt.Name = "cont_bt"
         Me.cont_bt.Size = New System.Drawing.Size(163, 30)
         Me.cont_bt.TabIndex = 29
