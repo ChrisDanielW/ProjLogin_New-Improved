@@ -28,16 +28,18 @@ Partial Class Form10
         Me.close_bt = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.CheckTable = New System.Windows.Forms.DataGridView()
         CType(Me.fexit_bt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.mini_bt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.close_bt, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CheckTable, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'fexit_bt
         '
         Me.fexit_bt.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fexit_bt.Image = CType(resources.GetObject("fexit_bt.Image"), System.Drawing.Image)
-        Me.fexit_bt.Location = New System.Drawing.Point(982, 12)
+        Me.fexit_bt.Location = New System.Drawing.Point(1112, 12)
         Me.fexit_bt.Name = "fexit_bt"
         Me.fexit_bt.Size = New System.Drawing.Size(35, 30)
         Me.fexit_bt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -48,7 +50,7 @@ Partial Class Form10
         '
         Me.mini_bt.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.mini_bt.Image = CType(resources.GetObject("mini_bt.Image"), System.Drawing.Image)
-        Me.mini_bt.Location = New System.Drawing.Point(1023, 12)
+        Me.mini_bt.Location = New System.Drawing.Point(1153, 12)
         Me.mini_bt.Name = "mini_bt"
         Me.mini_bt.Size = New System.Drawing.Size(35, 30)
         Me.mini_bt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -59,7 +61,7 @@ Partial Class Form10
         '
         Me.close_bt.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.close_bt.Image = CType(resources.GetObject("close_bt.Image"), System.Drawing.Image)
-        Me.close_bt.Location = New System.Drawing.Point(1064, 12)
+        Me.close_bt.Location = New System.Drawing.Point(1194, 12)
         Me.close_bt.Name = "close_bt"
         Me.close_bt.Size = New System.Drawing.Size(34, 30)
         Me.close_bt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -91,12 +93,29 @@ Partial Class Form10
         Me.Label3.Text = "Checkout"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'CheckTable
+        '
+        Me.CheckTable.AllowUserToAddRows = False
+        Me.CheckTable.AllowUserToDeleteRows = False
+        Me.CheckTable.AllowUserToResizeColumns = False
+        Me.CheckTable.AllowUserToResizeRows = False
+        Me.CheckTable.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(217, Byte), Integer))
+        Me.CheckTable.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.CheckTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.CheckTable.Location = New System.Drawing.Point(36, 96)
+        Me.CheckTable.Name = "CheckTable"
+        Me.CheckTable.RowHeadersWidth = 51
+        Me.CheckTable.RowTemplate.Height = 29
+        Me.CheckTable.Size = New System.Drawing.Size(1165, 546)
+        Me.CheckTable.TabIndex = 32
+        '
         'Form10
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(134, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1110, 700)
+        Me.ClientSize = New System.Drawing.Size(1240, 700)
+        Me.Controls.Add(Me.CheckTable)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.fexit_bt)
@@ -108,6 +127,7 @@ Partial Class Form10
         CType(Me.fexit_bt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.mini_bt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.close_bt, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CheckTable, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -118,4 +138,5 @@ Partial Class Form10
     Friend WithEvents close_bt As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents CheckTable As DataGridView
 End Class

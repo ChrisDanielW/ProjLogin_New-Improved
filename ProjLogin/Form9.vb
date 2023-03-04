@@ -98,6 +98,64 @@ Public Class Form9
 
     Private Sub cont_bt_Click(sender As Object, e As EventArgs) Handles cont_bt.Click
 
+        If itemlist.Items.Count = 0 Then
+            MessageBox.Show("There are no items in your cart")
+
+        ElseIf MsgBox("Do you wish to proceed to checkout with the items currently in your cart?)", vbQuestion Or vbYesNo Or vbDefaultButton2, "Proceed to Checkout") = vbYes Then
+            Dim connString As String = "datasource=localhost; uid=root; pwd=Chs55432; database=plitdb"
+            Dim con As New MySqlConnection(connString)
+            Dim cmd As New MySqlCommand
+            cmd.Connection = con
+            Dim rnd As New Random()
+            Dim itmid, itmprice, totprice, orderid As Integer
+            totprice = 0
+            Dim usid, usname, itmname, usphone As String 'crcard no next form
+            usid = UserID
+            Dim numbers As List(Of Integer) = Enumerable.Range(1000, 9000).ToList()
+            numbers = numbers.OrderBy(Function() rnd.Next()).ToList()
+            con.Open()
+            MessageBox.Show(itemlist.Items.Count)
+            For i2 As Integer = 0 To itemlist.Items.Count - 1
+                cmd.CommandText = "SELECT * from catalogue where itm_id = @v1"
+                cmd.Parameters.AddWithValue("@v1", AllPub.Cart(i2))
+                Using dr As MySqlDataReader = cmd.ExecuteReader
+                    If dr.Read() Then
+                        itmid = AllPub.Cart(i2)
+                        itmprice = dr.GetInt32("itm_price")
+                        totprice += itmprice
+                        orderid = numbers(i2)
+                        itmname = dr.GetString("itm_name")
+                    End If
+                End Using
+                cmd.Parameters.Clear()
+                cmd.CommandText = "INSERT into checkout (itm_id, itm_price, order_id, itm_name) values (@v1, @v2, @v3, @v5); UPDATE checkout set total_price = @v4"
+                cmd.Parameters.AddWithValue("@v1", itmid)
+                cmd.Parameters.AddWithValue("@v2", itmprice)
+                cmd.Parameters.AddWithValue("@v3", orderid)
+                cmd.Parameters.AddWithValue("@v4", totprice)
+                cmd.Parameters.AddWithValue("@v5", itmname)
+                cmd.ExecuteNonQuery()
+                cmd.Parameters.Clear()
+                cmd.CommandText = "SELECT * from user_reg where us_id = @v1"
+                cmd.Parameters.AddWithValue("@v1", usid)
+                Using dr As MySqlDataReader = cmd.ExecuteReader
+                    If dr.Read() Then
+                        usname = dr.GetString("us_name")
+                        usphone = dr.GetString("us_phone")
+                    End If
+                End Using
+                cmd.CommandText = "UPDATE checkout set us_id = @v1, us_name = @v2, us_phone = @v3"
+                cmd.Parameters.AddWithValue("@v2", usname)
+                cmd.Parameters.AddWithValue("@v3", usphone)
+                cmd.ExecuteNonQuery()
+                cmd.Parameters.Clear()
+            Next
+            con.Close()
+            Form7.Show()
+            Me.Close()
+
+        End If
+
     End Sub
 
 End Class

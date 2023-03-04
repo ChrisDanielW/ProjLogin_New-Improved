@@ -7,6 +7,8 @@ Public Module AllPub
     Public Cart(50) As Integer
     Public ind As Integer = 0
     Public ccno As String
+    Public srate As Integer
+    Public irate As Integer
 End Module
 Public Class Form8
 
