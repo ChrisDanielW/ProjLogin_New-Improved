@@ -103,11 +103,10 @@ Partial Class Form2
         'adm_pwd_txt
         '
         Me.adm_pwd_txt.BackColor = System.Drawing.Color.White
-        Me.adm_pwd_txt.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.adm_pwd_txt.ForeColor = System.Drawing.Color.Black
         Me.adm_pwd_txt.Location = New System.Drawing.Point(27, 256)
         Me.adm_pwd_txt.Name = "adm_pwd_txt"
-        Me.adm_pwd_txt.Size = New System.Drawing.Size(266, 20)
+        Me.adm_pwd_txt.Size = New System.Drawing.Size(266, 27)
         Me.adm_pwd_txt.TabIndex = 9
         '
         'Label4
@@ -136,11 +135,10 @@ Partial Class Form2
         'adm_id_txt
         '
         Me.adm_id_txt.BackColor = System.Drawing.Color.White
-        Me.adm_id_txt.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.adm_id_txt.ForeColor = System.Drawing.Color.Black
         Me.adm_id_txt.Location = New System.Drawing.Point(27, 179)
         Me.adm_id_txt.Name = "adm_id_txt"
-        Me.adm_id_txt.Size = New System.Drawing.Size(266, 20)
+        Me.adm_id_txt.Size = New System.Drawing.Size(266, 27)
         Me.adm_id_txt.TabIndex = 4
         '
         'cont_bt

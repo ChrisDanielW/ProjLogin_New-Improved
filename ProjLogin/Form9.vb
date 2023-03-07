@@ -101,7 +101,7 @@ Public Class Form9
         If itemlist.Items.Count = 0 Then
             MessageBox.Show("There are no items in your cart")
 
-        ElseIf MsgBox("Do you wish to proceed to checkout with the items currently in your cart?)", vbQuestion Or vbYesNo Or vbDefaultButton2, "Proceed to Checkout") = vbYes Then
+        ElseIf MsgBox("Do you wish to proceed to checkout with the items currently in your cart?", vbQuestion Or vbYesNo Or vbDefaultButton2, "Proceed to Checkout") = vbYes Then
             Dim connString As String = "datasource=localhost; uid=root; pwd=Chs55432; database=plitdb"
             Dim con As New MySqlConnection(connString)
             Dim cmd As New MySqlCommand
@@ -114,7 +114,7 @@ Public Class Form9
             Dim numbers As List(Of Integer) = Enumerable.Range(1000, 9000).ToList()
             numbers = numbers.OrderBy(Function() rnd.Next()).ToList()
             con.Open()
-            MessageBox.Show(itemlist.Items.Count)
+            'MessageBox.Show(itemlist.Items.Count)
             For i2 As Integer = 0 To itemlist.Items.Count - 1
                 cmd.CommandText = "SELECT * from catalogue where itm_id = @v1"
                 cmd.Parameters.AddWithValue("@v1", AllPub.Cart(i2))
@@ -124,6 +124,8 @@ Public Class Form9
                         itmprice = dr.GetInt32("itm_price")
                         totprice += itmprice
                         orderid = numbers(i2)
+                        orders(i2) = orderid
+                        orders(i2 + 1) = -1
                         itmname = dr.GetString("itm_name")
                     End If
                 End Using
@@ -151,6 +153,7 @@ Public Class Form9
                 cmd.Parameters.Clear()
             Next
             con.Close()
+            Form4.Close()
             Form7.Show()
             Me.Close()
 

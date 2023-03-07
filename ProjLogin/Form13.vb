@@ -1,9 +1,7 @@
 ﻿Imports System.Runtime.InteropServices
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Header
 Imports MySql.Data.MySqlClient
 
-Public Class Form7
-
+Public Class Form13
 
     Public Const WM_NCLBUTTONDOWN As Integer = 161
     Public Const HT_CAPTION As Integer = 2
@@ -35,40 +33,33 @@ Public Class Form7
         End If
     End Sub
 
-    Dim cash As Boolean = False
-    Dim card As Boolean = False
-    Private Sub Form7_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ccno_lbl.Visible = False
-        ccno_txt.Visible = False
-        next_bt.Visible = False
-    End Sub
-
-    Private Sub cash_rad_CheckedChanged(sender As Object, e As EventArgs) Handles cash_rad.CheckedChanged
-        next_bt.Visible = True
-        cash = True
-    End Sub
-    Private Sub card_rad_CheckedChanged(sender As Object, e As EventArgs) Handles card_rad.CheckedChanged
-        next_bt.Visible = True
-        ccno_lbl.Visible = True
-        ccno_txt.Visible = True
-        card = True
-    End Sub
-
-    Private Sub next_bt_Click(sender As Object, e As EventArgs) Handles next_bt.Click
-        If card = True Then
-            AllPub.ccno = ccno_txt.Text
-        Else
-            AllPub.ccno = "-1"
-        End If
-        Dim cred As String = AllPub.ccno
+    Private Sub Form13_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim name, uid, card As String
+        Dim ino As Integer = AllPub.ino
         Dim connString As String = "datasource=localhost; uid=root; pwd=Chs55432; database=plitdb"
         Dim con As New MySqlConnection(connString)
-        Dim cmd As New MySqlCommand("UPDATE checkout set crcard_no = @v1", con)
-        cmd.Parameters.AddWithValue("@v1", cred)
+        Dim cmd As New MySqlCommand("SELECT * from checkout", con)
+        Dim ad As New MySqlDataAdapter(cmd)
+        Dim datatable As New DataTable
         con.Open()
-        cmd.ExecuteNonQuery()
+        ad.Fill(datatable)
+        FullOrder.DataSource = datatable
+        Using dr As MySqlDataReader = cmd.ExecuteReader
+            If dr.Read() Then
+                name = dr.GetString("us_name")
+                uid = dr.GetString("us_id")
+                card = dr.GetString("crcard_no")
+            End If
+        End Using
         con.Close()
-        Form10.Show()
-        Me.Close()
+        uid_lbl.Text = uid
+        name_lbl.Text = name
+        ino_lbl.Text = ino
+        If card = "-1" Then
+            card_lbl.Text = "NA"
+        Else
+            card_lbl.Text = card
+        End If
     End Sub
+
 End Class

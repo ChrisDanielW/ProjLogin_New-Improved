@@ -5,10 +5,12 @@ Public Module AllPub
     Public UserID As String
     Public ItemID As Integer
     Public Cart(50) As Integer
-    Public ind As Integer = 0
+    Public Ind As Integer = 0
     Public ccno As String
     Public srate As Integer
     Public irate As Integer
+    Public orders(50) As Integer
+    Public ino As Integer = 0
 End Module
 Public Class Form8
 

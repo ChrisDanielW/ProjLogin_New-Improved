@@ -138,6 +138,7 @@ Partial Class Form7
         'ccno_txt
         '
         Me.ccno_txt.BackColor = System.Drawing.Color.Navy
+        Me.ccno_txt.ForeColor = System.Drawing.Color.White
         Me.ccno_txt.Location = New System.Drawing.Point(440, 111)
         Me.ccno_txt.Name = "ccno_txt"
         Me.ccno_txt.Size = New System.Drawing.Size(265, 27)

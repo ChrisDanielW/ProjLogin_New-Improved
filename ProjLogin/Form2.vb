@@ -45,11 +45,11 @@ Public Class Form2
             If dr.Read Then
                 If dr.GetString("adm_id") = adm_id_txt.Text Then
                     If dr.GetString("adm_pwd") = adm_pwd_txt.Text Then
-                        MessageBox.Show("Login Successful")
-                        Form3.Show()
+                        MessageBox.Show("Authentication Successful")
                         dr.Close()
                         con.Close()
                         cmd.Parameters.Clear()
+                        Form11.Show()
                         Me.Close()
                     Else
                         MessageBox.Show("The password you entered is incorrect")

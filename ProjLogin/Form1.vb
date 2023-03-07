@@ -27,11 +27,6 @@ Public Class Form1
     '//Full Exit Button Message
     Private Sub ExitForm(sender As Object, e As EventArgs) Handles fexit_bt.Click
         If MsgBox("Are you sure you want to exit? (closes all forms)", vbQuestion Or vbYesNo Or vbDefaultButton2, "Full Exit") = vbYes Then
-            'Dim con2 As New MySqlConnection("datasource=localhost; uid=root; pwd=Chs55432; database=plitdb")
-            'Dim del As New MySqlCommand("TRUNCATE table compcheck")
-            'con2.Open()
-            'del.ExecuteNonQuery()
-            'con2.Close()
             Application.Exit()
         End If
     End Sub
@@ -134,4 +129,11 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim con2 As New MySqlConnection("datasource=localhost; uid=root; pwd=Chs55432; database=plitdb")
+        Dim del As New MySqlCommand("TRUNCATE table checkout; TRUNCATE table compcheck", con2)
+        con2.Open()
+        del.ExecuteNonQuery()
+        con2.Close()
+    End Sub
 End Class
