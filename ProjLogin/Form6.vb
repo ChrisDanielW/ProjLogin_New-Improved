@@ -123,7 +123,7 @@ Public Class Form6
                         If s_rate < i_rate Then
                             verd_txt.Text = "Your system is incapable of optimally running this product"
                         ElseIf s_rate = i_rate Then
-                            verd_txt.Text = "Your system appears to just meet the product's requirements but considering it's specifications and it's lack of a graphics card, it is not recommended to consider running this software on it. Try again after adding a dedicated graphics card to your system"
+                            verd_txt.Text = "Your system appears to just meet the product's requirements but considering its specifications and its lack of a graphics card, it is not recommended to consider running this software on it. Try again after adding a dedicated graphics card to your system"
                         Else
                             verd_txt.Text = "Your system should be able to run this product. Consider adding a graphics card to your system to achieve optimal better performance"
                             addcrt_bt.Visible = True

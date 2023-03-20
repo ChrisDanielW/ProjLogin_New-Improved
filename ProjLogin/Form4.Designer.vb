@@ -24,26 +24,16 @@ Partial Class Form4
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form4))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.fexit_bt = New System.Windows.Forms.PictureBox()
         Me.mini_bt = New System.Windows.Forms.PictureBox()
         Me.close_bt = New System.Windows.Forms.PictureBox()
         Me.ItemCat = New System.Windows.Forms.Panel()
-        Me.L24 = New System.Windows.Forms.Label()
-        Me.B24 = New System.Windows.Forms.PictureBox()
         Me.L18 = New System.Windows.Forms.Label()
         Me.B18 = New System.Windows.Forms.PictureBox()
         Me.L12 = New System.Windows.Forms.Label()
         Me.B12 = New System.Windows.Forms.PictureBox()
         Me.L6 = New System.Windows.Forms.Label()
         Me.B6 = New System.Windows.Forms.PictureBox()
-        Me.L23 = New System.Windows.Forms.Label()
-        Me.B23 = New System.Windows.Forms.PictureBox()
-        Me.L22 = New System.Windows.Forms.Label()
-        Me.B22 = New System.Windows.Forms.PictureBox()
-        Me.L21 = New System.Windows.Forms.Label()
-        Me.B21 = New System.Windows.Forms.PictureBox()
         Me.L20 = New System.Windows.Forms.Label()
         Me.B20 = New System.Windows.Forms.PictureBox()
         Me.L19 = New System.Windows.Forms.Label()
@@ -80,18 +70,13 @@ Partial Class Form4
         Me.B1 = New System.Windows.Forms.PictureBox()
         Me.cartpic = New System.Windows.Forms.PictureBox()
         Me.cart_bt = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.fexit_bt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.mini_bt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.close_bt, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ItemCat.SuspendLayout()
-        CType(Me.B24, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.B18, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.B12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.B6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.B23, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.B22, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.B21, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.B20, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.B19, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.B17, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -126,26 +111,6 @@ Partial Class Form4
         Me.Label1.Text = "Catalogue"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.Color.Black
-        Me.TextBox1.ForeColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(829, 97)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.PlaceholderText = "Search here..."
-        Me.TextBox1.Size = New System.Drawing.Size(350, 27)
-        Me.TextBox1.TabIndex = 13
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(1185, 86)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(49, 46)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 15
-        Me.PictureBox1.TabStop = False
-        '
         'fexit_bt
         '
         Me.fexit_bt.Image = CType(resources.GetObject("fexit_bt.Image"), System.Drawing.Image)
@@ -179,20 +144,12 @@ Partial Class Form4
         'ItemCat
         '
         Me.ItemCat.BackColor = System.Drawing.Color.Navy
-        Me.ItemCat.Controls.Add(Me.L24)
-        Me.ItemCat.Controls.Add(Me.B24)
         Me.ItemCat.Controls.Add(Me.L18)
         Me.ItemCat.Controls.Add(Me.B18)
         Me.ItemCat.Controls.Add(Me.L12)
         Me.ItemCat.Controls.Add(Me.B12)
         Me.ItemCat.Controls.Add(Me.L6)
         Me.ItemCat.Controls.Add(Me.B6)
-        Me.ItemCat.Controls.Add(Me.L23)
-        Me.ItemCat.Controls.Add(Me.B23)
-        Me.ItemCat.Controls.Add(Me.L22)
-        Me.ItemCat.Controls.Add(Me.B22)
-        Me.ItemCat.Controls.Add(Me.L21)
-        Me.ItemCat.Controls.Add(Me.B21)
         Me.ItemCat.Controls.Add(Me.L20)
         Me.ItemCat.Controls.Add(Me.B20)
         Me.ItemCat.Controls.Add(Me.L19)
@@ -231,28 +188,6 @@ Partial Class Form4
         Me.ItemCat.Name = "ItemCat"
         Me.ItemCat.Size = New System.Drawing.Size(1221, 546)
         Me.ItemCat.TabIndex = 14
-        '
-        'L24
-        '
-        Me.L24.AutoEllipsis = True
-        Me.L24.AutoSize = True
-        Me.L24.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.L24.ForeColor = System.Drawing.Color.White
-        Me.L24.Location = New System.Drawing.Point(979, 469)
-        Me.L24.Name = "L24"
-        Me.L24.Size = New System.Drawing.Size(153, 28)
-        Me.L24.TabIndex = 117
-        Me.L24.Text = "Microsoft Word"
-        '
-        'B24
-        '
-        Me.B24.Image = CType(resources.GetObject("B24.Image"), System.Drawing.Image)
-        Me.B24.Location = New System.Drawing.Point(907, 469)
-        Me.B24.Name = "B24"
-        Me.B24.Size = New System.Drawing.Size(66, 58)
-        Me.B24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.B24.TabIndex = 116
-        Me.B24.TabStop = False
         '
         'L18
         '
@@ -319,72 +254,6 @@ Partial Class Form4
         Me.B6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.B6.TabIndex = 110
         Me.B6.TabStop = False
-        '
-        'L23
-        '
-        Me.L23.AutoEllipsis = True
-        Me.L23.AutoSize = True
-        Me.L23.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.L23.ForeColor = System.Drawing.Color.White
-        Me.L23.Location = New System.Drawing.Point(979, 377)
-        Me.L23.Name = "L23"
-        Me.L23.Size = New System.Drawing.Size(153, 28)
-        Me.L23.TabIndex = 109
-        Me.L23.Text = "Microsoft Word"
-        '
-        'B23
-        '
-        Me.B23.Image = CType(resources.GetObject("B23.Image"), System.Drawing.Image)
-        Me.B23.Location = New System.Drawing.Point(907, 377)
-        Me.B23.Name = "B23"
-        Me.B23.Size = New System.Drawing.Size(66, 58)
-        Me.B23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.B23.TabIndex = 108
-        Me.B23.TabStop = False
-        '
-        'L22
-        '
-        Me.L22.AutoEllipsis = True
-        Me.L22.AutoSize = True
-        Me.L22.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.L22.ForeColor = System.Drawing.Color.White
-        Me.L22.Location = New System.Drawing.Point(979, 288)
-        Me.L22.Name = "L22"
-        Me.L22.Size = New System.Drawing.Size(153, 28)
-        Me.L22.TabIndex = 107
-        Me.L22.Text = "Microsoft Word"
-        '
-        'B22
-        '
-        Me.B22.Image = CType(resources.GetObject("B22.Image"), System.Drawing.Image)
-        Me.B22.Location = New System.Drawing.Point(907, 288)
-        Me.B22.Name = "B22"
-        Me.B22.Size = New System.Drawing.Size(66, 58)
-        Me.B22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.B22.TabIndex = 106
-        Me.B22.TabStop = False
-        '
-        'L21
-        '
-        Me.L21.AutoEllipsis = True
-        Me.L21.AutoSize = True
-        Me.L21.Font = New System.Drawing.Font("Segoe UI Semibold", 11.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.L21.ForeColor = System.Drawing.Color.White
-        Me.L21.Location = New System.Drawing.Point(979, 199)
-        Me.L21.Name = "L21"
-        Me.L21.Size = New System.Drawing.Size(153, 28)
-        Me.L21.TabIndex = 105
-        Me.L21.Text = "Microsoft Word"
-        '
-        'B21
-        '
-        Me.B21.Image = CType(resources.GetObject("B21.Image"), System.Drawing.Image)
-        Me.B21.Location = New System.Drawing.Point(907, 199)
-        Me.B21.Name = "B21"
-        Me.B21.Size = New System.Drawing.Size(66, 58)
-        Me.B21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.B21.TabIndex = 104
-        Me.B21.TabStop = False
         '
         'L20
         '
@@ -793,27 +662,20 @@ Partial Class Form4
         Me.Controls.Add(Me.fexit_bt)
         Me.Controls.Add(Me.mini_bt)
         Me.Controls.Add(Me.close_bt)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ItemCat)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cart_bt)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form4"
         Me.Text = "Form4"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.fexit_bt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.mini_bt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.close_bt, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ItemCat.ResumeLayout(False)
         Me.ItemCat.PerformLayout()
-        CType(Me.B24, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.B18, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.B12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.B6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.B23, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.B22, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.B21, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.B20, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.B19, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.B17, System.ComponentModel.ISupportInitialize).EndInit()
@@ -837,8 +699,6 @@ Partial Class Form4
 
     End Sub
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents fexit_bt As PictureBox
     Friend WithEvents mini_bt As PictureBox
     Friend WithEvents close_bt As PictureBox
@@ -863,20 +723,12 @@ Partial Class Form4
     Friend WithEvents B3 As PictureBox
     Friend WithEvents L2 As Label
     Friend WithEvents B2 As PictureBox
-    Friend WithEvents L24 As Label
-    Friend WithEvents B24 As PictureBox
     Friend WithEvents L18 As Label
     Friend WithEvents B18 As PictureBox
     Friend WithEvents L12 As Label
     Friend WithEvents B12 As PictureBox
     Friend WithEvents L6 As Label
     Friend WithEvents B6 As PictureBox
-    Friend WithEvents L23 As Label
-    Friend WithEvents B23 As PictureBox
-    Friend WithEvents L22 As Label
-    Friend WithEvents B22 As PictureBox
-    Friend WithEvents L21 As Label
-    Friend WithEvents B21 As PictureBox
     Friend WithEvents L20 As Label
     Friend WithEvents B20 As PictureBox
     Friend WithEvents L19 As Label
