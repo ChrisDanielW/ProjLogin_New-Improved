@@ -197,9 +197,9 @@ Partial Class Form4
         Me.L18.ForeColor = System.Drawing.Color.White
         Me.L18.Location = New System.Drawing.Point(681, 469)
         Me.L18.Name = "L18"
-        Me.L18.Size = New System.Drawing.Size(82, 28)
+        Me.L18.Size = New System.Drawing.Size(177, 28)
         Me.L18.TabIndex = 115
-        Me.L18.Text = "Blender"
+        Me.L18.Text = "Visual Studio 2012"
         '
         'B18
         '
@@ -241,9 +241,9 @@ Partial Class Form4
         Me.L6.ForeColor = System.Drawing.Color.White
         Me.L6.Location = New System.Drawing.Point(97, 469)
         Me.L6.Name = "L6"
-        Me.L6.Size = New System.Drawing.Size(117, 28)
+        Me.L6.Size = New System.Drawing.Size(111, 28)
         Me.L6.TabIndex = 111
-        Me.L6.Text = "Libre Office"
+        Me.L6.Text = "LibreOffice"
         '
         'B6
         '
@@ -263,9 +263,9 @@ Partial Class Form4
         Me.L20.ForeColor = System.Drawing.Color.White
         Me.L20.Location = New System.Drawing.Point(979, 110)
         Me.L20.Name = "L20"
-        Me.L20.Size = New System.Drawing.Size(74, 28)
+        Me.L20.Size = New System.Drawing.Size(89, 28)
         Me.L20.TabIndex = 103
-        Me.L20.Text = "Matlab"
+        Me.L20.Text = "MATLAB"
         '
         'B20
         '
@@ -351,9 +351,9 @@ Partial Class Form4
         Me.L15.ForeColor = System.Drawing.Color.White
         Me.L15.Location = New System.Drawing.Point(681, 199)
         Me.L15.Name = "L15"
-        Me.L15.Size = New System.Drawing.Size(81, 28)
+        Me.L15.Size = New System.Drawing.Size(175, 28)
         Me.L15.TabIndex = 95
-        Me.L15.Text = "McAfee"
+        Me.L15.Text = "McAfee Anti-virus"
         '
         'B15
         '
@@ -461,9 +461,9 @@ Partial Class Form4
         Me.L9.ForeColor = System.Drawing.Color.White
         Me.L9.Location = New System.Drawing.Point(392, 199)
         Me.L9.Name = "L9"
-        Me.L9.Size = New System.Drawing.Size(78, 28)
+        Me.L9.Size = New System.Drawing.Size(172, 28)
         Me.L9.TabIndex = 85
-        Me.L9.Text = "Norton"
+        Me.L9.Text = "Norton Anti-virus"
         '
         'B9
         '

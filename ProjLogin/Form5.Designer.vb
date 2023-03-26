@@ -27,6 +27,7 @@ Partial Class Form5
         Me.close_bt = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.rate_lbl = New System.Windows.Forms.Label()
         Me.price_lbl = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Display_name = New System.Windows.Forms.Label()
@@ -44,7 +45,6 @@ Partial Class Form5
         Me.ram_txt = New System.Windows.Forms.TextBox()
         Me.os_txt = New System.Windows.Forms.TextBox()
         Me.fexit_bt = New System.Windows.Forms.PictureBox()
-        Me.rate_lbl = New System.Windows.Forms.Label()
         CType(Me.mini_bt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.close_bt, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -103,17 +103,29 @@ Partial Class Form5
         Me.Panel1.Size = New System.Drawing.Size(910, 385)
         Me.Panel1.TabIndex = 15
         '
+        'rate_lbl
+        '
+        Me.rate_lbl.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.rate_lbl.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.rate_lbl.ForeColor = System.Drawing.Color.White
+        Me.rate_lbl.Location = New System.Drawing.Point(665, 236)
+        Me.rate_lbl.Name = "rate_lbl"
+        Me.rate_lbl.Size = New System.Drawing.Size(212, 32)
+        Me.rate_lbl.TabIndex = 26
+        Me.rate_lbl.Text = "BIGPlaceHolder"
+        Me.rate_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'price_lbl
         '
-        Me.price_lbl.AutoSize = True
-        Me.price_lbl.Font = New System.Drawing.Font("Segoe UI Semibold", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.price_lbl.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.price_lbl.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.price_lbl.ForeColor = System.Drawing.Color.White
-        Me.price_lbl.Location = New System.Drawing.Point(740, 134)
+        Me.price_lbl.Location = New System.Drawing.Point(665, 134)
         Me.price_lbl.Name = "price_lbl"
-        Me.price_lbl.Size = New System.Drawing.Size(145, 32)
+        Me.price_lbl.Size = New System.Drawing.Size(212, 32)
         Me.price_lbl.TabIndex = 18
-        Me.price_lbl.Text = "PlaceHolder"
-        Me.price_lbl.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.price_lbl.Text = "BIGPlaceHolder"
+        Me.price_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label7
         '
@@ -301,17 +313,6 @@ Partial Class Form5
         Me.fexit_bt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.fexit_bt.TabIndex = 25
         Me.fexit_bt.TabStop = False
-        '
-        'rate_lbl
-        '
-        Me.rate_lbl.AutoSize = True
-        Me.rate_lbl.Font = New System.Drawing.Font("Segoe UI Semibold", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.rate_lbl.ForeColor = System.Drawing.Color.White
-        Me.rate_lbl.Location = New System.Drawing.Point(740, 236)
-        Me.rate_lbl.Name = "rate_lbl"
-        Me.rate_lbl.Size = New System.Drawing.Size(145, 32)
-        Me.rate_lbl.TabIndex = 26
-        Me.rate_lbl.Text = "PlaceHolder"
         '
         'Form5
         '

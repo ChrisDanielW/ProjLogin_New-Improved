@@ -35,6 +35,14 @@ Public Class Form7
         End If
     End Sub
 
+    Private Sub CredNumber(sender As Object, e As KeyPressEventArgs) Handles ccno_txt.KeyPress
+        If Char.IsDigit(e.KeyChar) Or e.KeyChar = vbBack Or e.KeyChar = " " Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
     Dim cash As Boolean = False
     Dim card As Boolean = False
     Private Sub Form7_Load(sender As Object, e As EventArgs) Handles MyBase.Load

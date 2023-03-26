@@ -45,7 +45,12 @@ Public Class Form5
         Using dr As MySqlDataReader = cmd.ExecuteReader
             If dr.Read() Then
                 Display_name.Text = dr.GetString("itm_name")
-                price_lbl.Text = "Rs. " + dr.GetInt32("itm_price").ToString
+                Dim price As Integer = dr.GetInt32("itm_price")
+                If price = 0 Then
+                    price_lbl.Text = "FREE"
+                Else
+                    price_lbl.Text = "Rs. " + price.ToString
+                End If
                 os_txt.Text = dr.GetString("i_os")
                 ram_txt.Text = dr.GetString("i_ram")
                 storage_txt.Text = dr.GetInt32("i_storage")

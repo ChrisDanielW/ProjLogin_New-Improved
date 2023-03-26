@@ -59,7 +59,7 @@ Public Class Form6
         cmd.Parameters.AddWithValue("@r1", us_id)
         Dim dr1 As MySqlDataReader = cmd.ExecuteReader
         If dr1.Read Then
-            s_rate = dr1.GetInt32("s_rate")
+            s_rate = dr1.GetDouble("s_rate")
             If dr1.GetString("s_gpu") = "NA" Then
                 HasGPU = False
             Else
@@ -74,7 +74,7 @@ Public Class Form6
         cmd.Parameters.AddWithValue("@v1", itm_id)
         Dim dr2 As MySqlDataReader = cmd.ExecuteReader
         If dr2.Read Then
-            i_rate = dr2.GetInt32("i_rate")
+            i_rate = dr2.GetDouble("i_rate")
             If dr2.GetString("i_gpu") = "NA" Then
                 NeedsGPU = False
             Else

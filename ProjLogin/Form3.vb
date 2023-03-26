@@ -56,6 +56,7 @@ Public Class Form3
     Dim HasIntel As Boolean
     Dim HasAMD As Boolean
     Private Sub cpumfct_txt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cpumfct_txt.SelectedIndexChanged
+        cpugen_txt.Text = ""
         HasIntel = False
         HasAMD = False
         cpugen_lbl.Visible = True
@@ -99,6 +100,7 @@ Public Class Form3
     Private Sub int_rad_CheckedChanged(sender As Object, e As EventArgs) Handles int_rad.CheckedChanged, ded_rad.CheckedChanged
         If int_rad.Checked = True Then
             HasGPU = False
+            gpu_ded.Text = ""
             gpu_ded.Visible = False
             gpu_ded_lbl.Visible = False
         ElseIf ded_rad.Checked = True Then
@@ -140,7 +142,7 @@ Public Class Form3
 
             If cpugen_txt.Text = "1st" Or cpugen_txt.Text = "2nd" Or cpugen_txt.Text = "3rd" Then
                 SysRate += 0
-            ElseIf cpugen_txt.Text = "4th" Or cpugen_txt.Text = "5th" Or cpugen_txt.Text = "6th" Or cpugen_txt.Text = "7th " Then
+            ElseIf cpugen_txt.Text = "4th" Or cpugen_txt.Text = "5th" Or cpugen_txt.Text = "6th" Or cpugen_txt.Text = "7th" Then
                 SysRate += 1
             ElseIf cpugen_txt.Text = "8th" Or cpugen_txt.Text = "9th" Or cpugen_txt.Text = "10th" Then
                 SysRate += 2
@@ -198,6 +200,9 @@ Public Class Form3
     Dim CanEdit As Boolean = True
 
     Private Sub cont_bt_Click(sender As Object, e As EventArgs) Handles cont_bt.Click
+        If HasGPU = False Then
+            gpu_ded.Text = "NA"
+        End If
         If os_txt.Text = "" Or
            ram_box.Text = "" Or
            cpumfct_txt.Text = "" Or
@@ -225,11 +230,7 @@ Public Class Form3
                 cmd.Parameters.AddWithValue("@v4", Convert.ToInt32(storage_use_txt.Text))
                 cmd.Parameters.AddWithValue("@v5", remStore)
                 cmd.Parameters.AddWithValue("@v6", Convert.ToInt32(ram_box.Text))
-                If HasGPU = True Then
-                    cmd.Parameters.AddWithValue("@v7", gpu_ded.Text)
-                Else
-                    cmd.Parameters.AddWithValue("@v7", "NA")
-                End If
+                cmd.Parameters.AddWithValue("@v7", gpu_ded.Text)
                 cmd.Parameters.AddWithValue("@v8", SysRate)
                 cmd.Parameters.AddWithValue("@v9", cpugen_txt.Text)
                 cmd.Parameters.AddWithValue("@v10", cpumfct_txt.Text)
@@ -240,7 +241,7 @@ Public Class Form3
                 Form4.Show()
                 Me.Close()
             Else
-                    MessageBox.Show("System registration cancelled")
+                MessageBox.Show("System registration cancelled")
             End If
         End If
     End Sub

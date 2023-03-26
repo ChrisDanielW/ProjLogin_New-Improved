@@ -62,6 +62,7 @@ Partial Class Form13
         Me.fexit_bt.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fexit_bt.Image = CType(resources.GetObject("fexit_bt.Image"), System.Drawing.Image)
         Me.fexit_bt.Location = New System.Drawing.Point(982, 12)
+        Me.fexit_bt.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.fexit_bt.Name = "fexit_bt"
         Me.fexit_bt.Size = New System.Drawing.Size(35, 30)
         Me.fexit_bt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -73,6 +74,7 @@ Partial Class Form13
         Me.mini_bt.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.mini_bt.Image = CType(resources.GetObject("mini_bt.Image"), System.Drawing.Image)
         Me.mini_bt.Location = New System.Drawing.Point(1023, 12)
+        Me.mini_bt.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.mini_bt.Name = "mini_bt"
         Me.mini_bt.Size = New System.Drawing.Size(35, 30)
         Me.mini_bt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -84,6 +86,7 @@ Partial Class Form13
         Me.close_bt.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.close_bt.Image = CType(resources.GetObject("close_bt.Image"), System.Drawing.Image)
         Me.close_bt.Location = New System.Drawing.Point(1064, 12)
+        Me.close_bt.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.close_bt.Name = "close_bt"
         Me.close_bt.Size = New System.Drawing.Size(34, 30)
         Me.close_bt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -94,7 +97,8 @@ Partial Class Form13
         '
         Me.FullOrder.BackgroundColor = System.Drawing.Color.Brown
         Me.FullOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.FullOrder.Location = New System.Drawing.Point(21, 87)
+        Me.FullOrder.Location = New System.Drawing.Point(21, 88)
+        Me.FullOrder.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.FullOrder.Name = "FullOrder"
         Me.FullOrder.RowHeadersWidth = 51
         Me.FullOrder.RowTemplate.Height = 29
@@ -105,7 +109,7 @@ Partial Class Form13
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 17.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(509, 508)
+        Me.Label2.Location = New System.Drawing.Point(21, 508)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(378, 40)
         Me.Label2.TabIndex = 40
@@ -115,7 +119,7 @@ Partial Class Form13
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 17.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(656, 588)
+        Me.Label3.Location = New System.Drawing.Point(21, 588)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(231, 40)
         Me.Label3.TabIndex = 41
@@ -125,7 +129,7 @@ Partial Class Form13
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 17.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(719, 628)
+        Me.Label4.Location = New System.Drawing.Point(21, 628)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(168, 40)
         Me.Label4.TabIndex = 42
@@ -144,8 +148,8 @@ Partial Class Form13
         'ino_lbl
         '
         Me.ino_lbl.AutoSize = True
-        Me.ino_lbl.Font = New System.Drawing.Font("Segoe UI", 17.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ino_lbl.Location = New System.Drawing.Point(893, 508)
+        Me.ino_lbl.Font = New System.Drawing.Font("Segoe UI", 17.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
+        Me.ino_lbl.Location = New System.Drawing.Point(391, 508)
         Me.ino_lbl.Name = "ino_lbl"
         Me.ino_lbl.Size = New System.Drawing.Size(165, 40)
         Me.ino_lbl.TabIndex = 44
@@ -154,8 +158,8 @@ Partial Class Form13
         'name_lbl
         '
         Me.name_lbl.AutoSize = True
-        Me.name_lbl.Font = New System.Drawing.Font("Segoe UI", 17.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.name_lbl.Location = New System.Drawing.Point(893, 588)
+        Me.name_lbl.Font = New System.Drawing.Font("Segoe UI", 17.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
+        Me.name_lbl.Location = New System.Drawing.Point(243, 588)
         Me.name_lbl.Name = "name_lbl"
         Me.name_lbl.Size = New System.Drawing.Size(165, 40)
         Me.name_lbl.TabIndex = 45
@@ -164,8 +168,8 @@ Partial Class Form13
         'card_lbl
         '
         Me.card_lbl.AutoSize = True
-        Me.card_lbl.Font = New System.Drawing.Font("Segoe UI", 17.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.card_lbl.Location = New System.Drawing.Point(893, 628)
+        Me.card_lbl.Font = New System.Drawing.Font("Segoe UI", 17.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
+        Me.card_lbl.Location = New System.Drawing.Point(181, 628)
         Me.card_lbl.Name = "card_lbl"
         Me.card_lbl.Size = New System.Drawing.Size(165, 40)
         Me.card_lbl.TabIndex = 46
@@ -174,8 +178,8 @@ Partial Class Form13
         'uid_lbl
         '
         Me.uid_lbl.AutoSize = True
-        Me.uid_lbl.Font = New System.Drawing.Font("Segoe UI", 17.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.uid_lbl.Location = New System.Drawing.Point(893, 548)
+        Me.uid_lbl.Font = New System.Drawing.Font("Segoe UI", 17.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
+        Me.uid_lbl.Location = New System.Drawing.Point(197, 548)
         Me.uid_lbl.Name = "uid_lbl"
         Me.uid_lbl.Size = New System.Drawing.Size(165, 40)
         Me.uid_lbl.TabIndex = 48
@@ -185,7 +189,7 @@ Partial Class Form13
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 17.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.Location = New System.Drawing.Point(705, 548)
+        Me.Label7.Location = New System.Drawing.Point(21, 548)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(182, 40)
         Me.Label7.TabIndex = 47
@@ -212,6 +216,7 @@ Partial Class Form13
         Me.Controls.Add(Me.close_bt)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Form13"
         Me.Text = "Form13"
         CType(Me.fexit_bt, System.ComponentModel.ISupportInitialize).EndInit()
