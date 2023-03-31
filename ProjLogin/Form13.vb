@@ -1,10 +1,7 @@
-﻿Imports System.IO
-Imports System.Runtime.InteropServices
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Status
+﻿Imports System.Runtime.InteropServices
 Imports MySql.Data.MySqlClient
 
-Public Class Form4
-
+Public Class Form13
 
     Public Const WM_NCLBUTTONDOWN As Integer = 161
     Public Const HT_CAPTION As Integer = 2
@@ -36,34 +33,33 @@ Public Class Form4
         End If
     End Sub
 
-    Private Sub Form4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        For Each i_name As Control In ItemCat.Controls
-            If TypeOf i_name Is Label Then
-                AddHandler i_name.Click, AddressOf ItemClicked
-            End If
-        Next
-    End Sub
-
-    'Public ItemID As Integer
-    Private Sub ItemClicked(sender As Object, e As EventArgs)
-        Dim Selected_Item As Label = CType(sender, Label)
+    Private Sub Form13_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim name, uid, card As String
+        Dim ino As Integer = AllPub.ino
         Dim connString As String = "datasource=localhost; uid=root; pwd=Chs55432; database=plitdb"
         Dim con As New MySqlConnection(connString)
-        Dim iname As String = Selected_Item.Text
+        Dim cmd As New MySqlCommand("SELECT * from checkout", con)
+        Dim ad As New MySqlDataAdapter(cmd)
+        Dim datatable As New DataTable
         con.Open()
-        Dim cmd As New MySqlCommand("SELECT * from catalogue where itm_name = @v1", con)
-        cmd.Parameters.AddWithValue("@v1", iname)
+        ad.Fill(datatable)
+        FullOrder.DataSource = datatable
         Using dr As MySqlDataReader = cmd.ExecuteReader
             If dr.Read() Then
-                ItemID = dr.GetInt32("itm_id")
+                name = dr.GetString("us_name")
+                uid = dr.GetString("us_id")
+                card = dr.GetString("crcard_no")
             End If
         End Using
-        cmd.Parameters.Clear()
         con.Close()
-        Form5.Show()
+        uid_lbl.Text = uid
+        name_lbl.Text = name
+        ino_lbl.Text = ino
+        If card = "-1" Then
+            card_lbl.Text = "NA"
+        Else
+            card_lbl.Text = card
+        End If
     End Sub
 
-    Private Sub cart_bt_Click(sender As Object, e As EventArgs) Handles cart_bt.Click, cartpic.Click
-        Form9.Show()
-    End Sub
 End Class

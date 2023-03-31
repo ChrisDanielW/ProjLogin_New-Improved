@@ -45,7 +45,6 @@ Partial Class Form1
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.switchadmin_bt = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.close_bt = New System.Windows.Forms.PictureBox()
         Me.mini_bt = New System.Windows.Forms.PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.fexit_bt = New System.Windows.Forms.PictureBox()
@@ -55,7 +54,6 @@ Partial Class Form1
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.close_bt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.mini_bt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.fexit_bt, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -189,10 +187,8 @@ Partial Class Form1
         Me.us_pwd_txt.ForeColor = System.Drawing.Color.Black
         Me.us_pwd_txt.Location = New System.Drawing.Point(33, 312)
         Me.us_pwd_txt.Name = "us_pwd_txt"
-        Me.us_pwd_txt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.us_pwd_txt.Size = New System.Drawing.Size(266, 27)
         Me.us_pwd_txt.TabIndex = 9
-        Me.us_pwd_txt.UseSystemPasswordChar = True
         '
         'Label4
         '
@@ -318,16 +314,6 @@ Partial Class Form1
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
-        'close_bt
-        '
-        Me.close_bt.Image = CType(resources.GetObject("close_bt.Image"), System.Drawing.Image)
-        Me.close_bt.Location = New System.Drawing.Point(1064, 12)
-        Me.close_bt.Name = "close_bt"
-        Me.close_bt.Size = New System.Drawing.Size(34, 30)
-        Me.close_bt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.close_bt.TabIndex = 4
-        Me.close_bt.TabStop = False
-        '
         'mini_bt
         '
         Me.mini_bt.Image = CType(resources.GetObject("mini_bt.Image"), System.Drawing.Image)
@@ -355,7 +341,7 @@ Partial Class Form1
         'fexit_bt
         '
         Me.fexit_bt.Image = CType(resources.GetObject("fexit_bt.Image"), System.Drawing.Image)
-        Me.fexit_bt.Location = New System.Drawing.Point(982, 12)
+        Me.fexit_bt.Location = New System.Drawing.Point(1063, 12)
         Me.fexit_bt.Name = "fexit_bt"
         Me.fexit_bt.Size = New System.Drawing.Size(35, 30)
         Me.fexit_bt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -372,7 +358,6 @@ Partial Class Form1
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.mini_bt)
-        Me.Controls.Add(Me.close_bt)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.switchadmin_bt)
         Me.ForeColor = System.Drawing.Color.Black
@@ -386,7 +371,6 @@ Partial Class Form1
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.close_bt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.mini_bt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.fexit_bt, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -407,7 +391,6 @@ Partial Class Form1
     Friend WithEvents us_pwd_txt As TextBox
     Protected WithEvents Label4 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents close_bt As PictureBox
     Friend WithEvents mini_bt As PictureBox
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox

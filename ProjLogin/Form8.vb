@@ -1,6 +1,17 @@
 ﻿Imports System.Runtime.InteropServices
 Imports MySql.Data.MySqlClient
 
+Public Module AllPub
+    Public UserID As String
+    Public ItemID As Integer
+    Public Cart(50) As Integer
+    Public Ind As Integer = 0
+    Public ccno As String
+    Public srate As Integer
+    Public irate As Integer
+    Public orders(50) As Integer
+    Public ino As Integer = 0
+End Module
 Public Class Form8
 
     Public Const WM_NCLBUTTONDOWN As Integer = 161
@@ -34,10 +45,11 @@ Public Class Form8
     End Sub
 
     Private Sub Continues(sender As Object, e As EventArgs) Handles cont_bt.Click
+
         If us_id_txt.Text = "" Or us_pwd_txt.Text = "" Then
             MessageBox.Show("Please fill all your details")
         Else
-            Dim con As New MySqlConnection("datasource=localhost; uid=root; pwd=Chs55432; database=plitdb")
+            Dim con As New MySqlConnection("datasource=localhost; uid=root; pwd=Chs55432; database=plitdb; AllowUserVariables=True")
             con.Open()
             Dim cmd As New MySqlCommand("SELECT * from user_login WHERE us_id = @v1", con)
             cmd.Parameters.AddWithValue("@v1", us_id_txt.Text)
@@ -46,10 +58,11 @@ Public Class Form8
                 If dr.GetString("us_id") = us_id_txt.Text Then
                     If dr.GetString("us_pwd") = us_pwd_txt.Text Then
                         MessageBox.Show("Login Successful")
-                        Form3.Show()
+                        UserID = dr.GetString("us_id")
                         dr.Close()
                         con.Close()
                         cmd.Parameters.Clear()
+                        Form3.Show()
                         Me.Close()
                     Else
                         MessageBox.Show("The password you entered is incorrect")
@@ -65,6 +78,7 @@ Public Class Form8
                 MessageBox.Show("The User ID entered does not exist")
             End If
         End If
+
     End Sub
 
     Private Sub clear_bt_Click(sender As Object, e As EventArgs) Handles clear_bt.Click

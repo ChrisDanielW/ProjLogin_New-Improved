@@ -24,10 +24,6 @@ Public Class Form1
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub CloseForm(sender As Object, e As EventArgs) Handles close_bt.Click
-        Me.Hide()
-    End Sub
-
     '//Full Exit Button Message
     Private Sub ExitForm(sender As Object, e As EventArgs) Handles fexit_bt.Click
         If MsgBox("Are you sure you want to exit? (closes all forms)", vbQuestion Or vbYesNo Or vbDefaultButton2, "Full Exit") = vbYes Then
@@ -54,10 +50,8 @@ Public Class Form1
         If us_email_txt.Text = "" Or us_id_txt.Text = "" Or us_phno_txt.Text = "" Or us_pwd_txt.Text = "" Or us_name_txt.Text = "" Then
             MessageBox.Show("Please fill all your details")
         ElseIf repcred = True Then
-            MessageBox.Show("The ID, email address and/or phone number entered seem to already exist in our database")
+            MessageBox.Show("The ID, email address and/or phone number entered seem(s) to already exist in our database")
         Else
-            'Dim cmd As New MySqlCommand
-            'cmd.Connection = con
             cmd.CommandText = "INSERT into user_reg (us_id, us_pwd, us_name, us_email, us_phone) values (@v1, @v2, @v3, @v4, @v5);
                                INSERT into user_login values (@v1, @v2)"
             cmd.Parameters.AddWithValue("@v1", us_id_txt.Text)
@@ -70,7 +64,7 @@ Public Class Form1
             con.Close()
             MessageBox.Show("Account created")
             cmd.Parameters.Clear()
-            Form3.Show()
+            Form8.Show()
             Me.Hide()
         End If
     End Sub
@@ -135,4 +129,11 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim con2 As New MySqlConnection("datasource=localhost; uid=root; pwd=Chs55432; database=plitdb")
+        Dim del As New MySqlCommand("TRUNCATE table checkout; TRUNCATE table compcheck", con2)
+        con2.Open()
+        del.ExecuteNonQuery()
+        con2.Close()
+    End Sub
 End Class
